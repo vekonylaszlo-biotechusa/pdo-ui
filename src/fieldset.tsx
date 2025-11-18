@@ -1,6 +1,6 @@
 import { Fieldset as FieldsetPrimitive } from "@base-ui-components/react/fieldset";
 
-import { cn } from "../lib/utils";
+import { cn } from "./lib/utils";
 
 function Fieldset({ className, ...props }: FieldsetPrimitive.Root.Props) {
   return (

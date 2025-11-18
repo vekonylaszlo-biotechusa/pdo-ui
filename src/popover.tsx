@@ -1,6 +1,6 @@
 import { Popover as PopoverPrimitive } from "@base-ui-components/react/popover";
 
-import { cn } from "../lib/utils";
+import { cn } from "./lib/utils";
 
 const Popover = PopoverPrimitive.Root;
 

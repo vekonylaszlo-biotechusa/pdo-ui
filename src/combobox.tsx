@@ -2,7 +2,7 @@ import { Combobox as ComboboxPrimitive } from "@base-ui-components/react/combobo
 import { ChevronsUpDownIcon, XIcon } from "lucide-react";
 import * as React from "react";
 
-import { cn } from "../lib/utils";
+import { cn } from "./lib/utils";
 import { Input } from "@/src/input";
 import { ScrollArea } from "@/src/scroll-area";
 
