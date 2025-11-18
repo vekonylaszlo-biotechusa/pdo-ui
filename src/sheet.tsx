@@ -1,8 +1,8 @@
-import { Dialog as SheetPrimitive } from '@base-ui-components/react/dialog';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { XIcon } from 'lucide-react';
+import { Dialog as SheetPrimitive } from "@base-ui-components/react/dialog";
+import { cva, type VariantProps } from "class-variance-authority";
+import { XIcon } from "lucide-react";
 
-import { cn } from '@/lib/utils';
+import { cn } from "../lib/utils";
 
 const Sheet = SheetPrimitive.Root;
 
@@ -19,23 +19,23 @@ function SheetClose(props: SheetPrimitive.Close.Props) {
 }
 
 const sheetPopupVariants = cva(
-  'fixed z-50 flex flex-col gap-4 overflow-y-auto bg-popover text-popover-foreground shadow-lg transition-[opacity,translate] duration-300 ease-in-out will-change-transform [--sheet-inset:0px] data-ending-style:opacity-0 data-starting-style:opacity-0',
+  "fixed z-50 flex flex-col gap-4 overflow-y-auto bg-popover text-popover-foreground shadow-lg transition-[opacity,translate] duration-300 ease-in-out will-change-transform [--sheet-inset:0px] data-ending-style:opacity-0 data-starting-style:opacity-0",
   {
     defaultVariants: {
       inset: false,
-      side: 'right',
+      side: "right",
     },
     variants: {
       inset: {
-        true: 'sm:rounded-xl sm:[--sheet-inset:1rem]',
+        true: "sm:rounded-xl sm:[--sheet-inset:1rem]",
       },
       side: {
         bottom:
-          'inset-x-[var(--sheet-inset)] bottom-[var(--sheet-inset)] h-auto max-h-[calc(100dvh-var(--sheet-inset)*2)] data-ending-style:translate-y-12 data-starting-style:translate-y-12',
-        left: 'data-ending-style:-translate-x-12 data-starting-style:-translate-x-12 inset-y-[var(--sheet-inset)] left-[var(--sheet-inset)] h-dvh w-[calc(100%-(--spacing(12)))] max-w-sm sm:h-[calc(100dvh-var(--sheet-inset)*2)]',
+          "inset-x-[var(--sheet-inset)] bottom-[var(--sheet-inset)] h-auto max-h-[calc(100dvh-var(--sheet-inset)*2)] data-ending-style:translate-y-12 data-starting-style:translate-y-12",
+        left: "data-ending-style:-translate-x-12 data-starting-style:-translate-x-12 inset-y-[var(--sheet-inset)] left-[var(--sheet-inset)] h-dvh w-[calc(100%-(--spacing(12)))] max-w-sm sm:h-[calc(100dvh-var(--sheet-inset)*2)]",
         right:
-          'inset-y-[var(--sheet-inset)] right-[var(--sheet-inset)] h-dvh w-[calc(100%-(--spacing(12)))] max-w-sm data-ending-style:translate-x-12 data-starting-style:translate-x-12 sm:h-[calc(100dvh-var(--sheet-inset)*2)]',
-        top: 'data-ending-style:-translate-y-12 data-starting-style:-translate-y-12 inset-x-[var(--sheet-inset)] top-[var(--sheet-inset)] h-auto max-h-[calc(100dvh-var(--sheet-inset)*2)]',
+          "inset-y-[var(--sheet-inset)] right-[var(--sheet-inset)] h-dvh w-[calc(100%-(--spacing(12)))] max-w-sm data-ending-style:translate-x-12 data-starting-style:translate-x-12 sm:h-[calc(100dvh-var(--sheet-inset)*2)]",
+        top: "data-ending-style:-translate-y-12 data-starting-style:-translate-y-12 inset-x-[var(--sheet-inset)] top-[var(--sheet-inset)] h-auto max-h-[calc(100dvh-var(--sheet-inset)*2)]",
       },
     },
   },
@@ -45,7 +45,7 @@ function SheetBackdrop({ className, ...props }: SheetPrimitive.Backdrop.Props) {
   return (
     <SheetPrimitive.Backdrop
       className={cn(
-        'fixed inset-0 z-50 bg-black/32 backdrop-blur-sm transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0',
+        "fixed inset-0 z-50 bg-black/32 backdrop-blur-sm transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0",
         className,
       )}
       data-slot="sheet-backdrop"
@@ -58,7 +58,7 @@ function SheetPopup({
   className,
   children,
   showCloseButton = true,
-  side = 'right',
+  side = "right",
   inset = false,
   ...props
 }: SheetPrimitive.Popup.Props & {
@@ -84,20 +84,20 @@ function SheetPopup({
   );
 }
 
-function SheetHeader({ className, ...props }: React.ComponentProps<'div'>) {
+function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn('flex flex-col gap-1.5 p-4', className)}
+      className={cn("flex flex-col gap-1.5 p-4", className)}
       data-slot="sheet-header"
       {...props}
     />
   );
 }
 
-function SheetFooter({ className, ...props }: React.ComponentProps<'div'>) {
+function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn('mt-auto flex flex-col gap-2 p-4', className)}
+      className={cn("mt-auto flex flex-col gap-2 p-4", className)}
       data-slot="sheet-footer"
       {...props}
     />
@@ -107,7 +107,7 @@ function SheetFooter({ className, ...props }: React.ComponentProps<'div'>) {
 function SheetTitle({ className, ...props }: SheetPrimitive.Title.Props) {
   return (
     <SheetPrimitive.Title
-      className={cn('font-semibold', className)}
+      className={cn("font-semibold", className)}
       data-slot="sheet-title"
       {...props}
     />
@@ -120,7 +120,7 @@ function SheetDescription({
 }: SheetPrimitive.Description.Props) {
   return (
     <SheetPrimitive.Description
-      className={cn('text-muted-foreground text-sm', className)}
+      className={cn("text-muted-foreground text-sm", className)}
       data-slot="sheet-description"
       {...props}
     />

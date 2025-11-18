@@ -1,9 +1,9 @@
-import { Autocomplete as AutocompletePrimitive } from '@base-ui-components/react/autocomplete';
-import { ChevronsUpDownIcon, XIcon } from 'lucide-react';
+import { Autocomplete as AutocompletePrimitive } from "@base-ui-components/react/autocomplete";
+import { ChevronsUpDownIcon, XIcon } from "lucide-react";
 
-import { cn } from '@/lib/utils';
-import { Input } from '@/src/input';
-import { ScrollArea } from '@/src/scroll-area';
+import { cn } from "../lib/utils";
+import { Input } from "@/src/input";
+import { ScrollArea } from "@/src/scroll-area";
 
 const Autocomplete = AutocompletePrimitive.Root;
 
@@ -13,20 +13,20 @@ function AutocompleteInput({
   showClear = false,
   size,
   ...props
-}: Omit<AutocompletePrimitive.Input.Props, 'size'> & {
+}: Omit<AutocompletePrimitive.Input.Props, "size"> & {
   showTrigger?: boolean;
   showClear?: boolean;
-  size?: 'sm' | 'default' | 'lg' | number;
+  size?: "sm" | "default" | "lg" | number;
 }) {
-  const sizeValue = (size ?? 'default') as 'sm' | 'default' | 'lg' | number;
+  const sizeValue = (size ?? "default") as "sm" | "default" | "lg" | number;
 
   return (
     <div className="relative w-full">
       <AutocompletePrimitive.Input
         className={cn(
-          sizeValue === 'sm'
-            ? 'has-[+[data-slot=autocomplete-trigger],+[data-slot=autocomplete-clear]]:*:data-[slot=autocomplete-input]:pe-6.5'
-            : 'has-[+[data-slot=autocomplete-trigger],+[data-slot=autocomplete-clear]]:*:data-[slot=autocomplete-input]:pe-7',
+          sizeValue === "sm"
+            ? "has-[+[data-slot=autocomplete-trigger],+[data-slot=autocomplete-clear]]:*:data-[slot=autocomplete-input]:pe-6.5"
+            : "has-[+[data-slot=autocomplete-trigger],+[data-slot=autocomplete-clear]]:*:data-[slot=autocomplete-input]:pe-7",
           className,
         )}
         data-slot="autocomplete-input"
@@ -37,7 +37,7 @@ function AutocompleteInput({
         <AutocompleteTrigger
           className={cn(
             "-translate-y-1/2 absolute top-1/2 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent opacity-72 outline-none transition-colors pointer-coarse:after:absolute pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:opacity-100 has-[+[data-slot=autocomplete-clear]]:hidden [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-            sizeValue === 'sm' ? 'end-0' : 'end-0.5',
+            sizeValue === "sm" ? "end-0" : "end-0.5",
           )}
         >
           <ChevronsUpDownIcon />
@@ -47,7 +47,7 @@ function AutocompleteInput({
         <AutocompleteClear
           className={cn(
             "-translate-y-1/2 absolute top-1/2 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent opacity-72 outline-none transition-colors pointer-coarse:after:absolute pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:opacity-100 has-[+[data-slot=autocomplete-clear]]:hidden [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-            sizeValue === 'sm' ? 'end-0' : 'end-0.5',
+            sizeValue === "sm" ? "end-0" : "end-0.5",
           )}
         >
           <XIcon />
@@ -75,7 +75,7 @@ function AutocompletePopup({
         <span className="relative flex max-h-full origin-(--transform-origin) rounded-lg border bg-popover bg-clip-padding transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-lg has-data-starting-style:scale-98 has-data-starting-style:opacity-0 dark:not-in-data-[slot=group]:bg-clip-border">
           <AutocompletePrimitive.Popup
             className={cn(
-              'flex max-h-[min(var(--available-height),23rem)] w-(--anchor-width) max-w-(--available-width) flex-col',
+              "flex max-h-[min(var(--available-height),23rem)] w-(--anchor-width) max-w-(--available-width) flex-col",
               className,
             )}
             data-slot="autocomplete-popup"
@@ -97,7 +97,7 @@ function AutocompleteItem({
   return (
     <AutocompletePrimitive.Item
       className={cn(
-        'flex cursor-default select-none items-center rounded-sm px-2 py-1 text-base outline-none data-disabled:pointer-events-none data-highlighted:bg-accent data-highlighted:text-accent-foreground data-disabled:opacity-64 sm:text-sm',
+        "flex cursor-default select-none items-center rounded-sm px-2 py-1 text-base outline-none data-disabled:pointer-events-none data-highlighted:bg-accent data-highlighted:text-accent-foreground data-disabled:opacity-64 sm:text-sm",
         className,
       )}
       data-slot="autocomplete-item"
@@ -114,7 +114,7 @@ function AutocompleteSeparator({
 }: AutocompletePrimitive.Separator.Props) {
   return (
     <AutocompletePrimitive.Separator
-      className={cn('mx-2 my-1 h-px bg-border last:hidden', className)}
+      className={cn("mx-2 my-1 h-px bg-border last:hidden", className)}
       data-slot="autocomplete-separator"
       {...props}
     />
@@ -141,7 +141,7 @@ function AutocompleteGroupLabel({
   return (
     <AutocompletePrimitive.GroupLabel
       className={cn(
-        'px-2 py-1.5 font-medium text-muted-foreground text-xs',
+        "px-2 py-1.5 font-medium text-muted-foreground text-xs",
         className,
       )}
       data-slot="autocomplete-group-label"
@@ -157,7 +157,7 @@ function AutocompleteEmpty({
   return (
     <AutocompletePrimitive.Empty
       className={cn(
-        'not-empty:p-2 text-center text-muted-foreground text-sm',
+        "not-empty:p-2 text-center text-muted-foreground text-sm",
         className,
       )}
       data-slot="autocomplete-empty"
@@ -193,7 +193,7 @@ function AutocompleteList({
     <ScrollArea className="flex-1">
       <AutocompletePrimitive.List
         className={cn(
-          'not-empty:scroll-py-1 not-empty:px-1 not-empty:py-1 in-data-has-overflow-y:pe-3',
+          "not-empty:scroll-py-1 not-empty:px-1 not-empty:py-1 in-data-has-overflow-y:pe-3",
           className,
         )}
         data-slot="autocomplete-list"
@@ -228,7 +228,7 @@ function AutocompleteStatus({
   return (
     <AutocompletePrimitive.Status
       className={cn(
-        'px-3 py-2 font-medium text-muted-foreground text-xs empty:m-0 empty:p-0',
+        "px-3 py-2 font-medium text-muted-foreground text-xs empty:m-0 empty:p-0",
         className,
       )}
       data-slot="autocomplete-status"

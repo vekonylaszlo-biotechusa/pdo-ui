@@ -1,39 +1,39 @@
-import type { Toggle as TogglePrimitive } from '@base-ui-components/react/toggle';
-import { ToggleGroup as ToggleGroupPrimitive } from '@base-ui-components/react/toggle-group';
-import type { VariantProps } from 'class-variance-authority';
-import * as React from 'react';
+import type { Toggle as TogglePrimitive } from "@base-ui-components/react/toggle";
+import { ToggleGroup as ToggleGroupPrimitive } from "@base-ui-components/react/toggle-group";
+import type { VariantProps } from "class-variance-authority";
+import * as React from "react";
 
-import { cn } from '@/lib/utils';
-import { Separator } from '@/src/separator';
-import { Toggle as ToggleComponent, type toggleVariants } from '@/src/toggle';
+import { cn } from "../lib/utils";
+import { Separator } from "@/src/separator";
+import { Toggle as ToggleComponent, type toggleVariants } from "@/src/toggle";
 
 const ToggleGroupContext = React.createContext<
   VariantProps<typeof toggleVariants>
 >({
-  size: 'default',
-  variant: 'default',
+  size: "default",
+  variant: "default",
 });
 
 function ToggleGroup({
   className,
-  variant = 'default',
-  size = 'default',
-  orientation = 'horizontal',
+  variant = "default",
+  size = "default",
+  orientation = "horizontal",
   children,
   ...props
 }: ToggleGroupPrimitive.Props & VariantProps<typeof toggleVariants>) {
   return (
     <ToggleGroupPrimitive
       className={cn(
-        'flex w-fit *:focus-visible:z-10',
-        orientation === 'horizontal'
-          ? '*:pointer-coarse:after:min-w-auto'
-          : '*:pointer-coarse:after:min-h-auto',
-        variant === 'default'
-          ? 'gap-0.5'
-          : orientation === 'horizontal'
-            ? '*:not-first:before:-start-[0.5px] *:not-last:before:-end-[0.5px] *:not-first:rounded-s-none *:not-last:rounded-e-none *:not-first:border-s-0 *:not-last:border-e-0 *:not-first:before:rounded-s-none *:not-last:before:rounded-e-none'
-            : '*:not-first:before:-top-[0.5px] *:not-last:before:-bottom-[0.5px] flex-col *:not-first:rounded-t-none *:not-last:rounded-b-none *:not-first:border-t-0 *:not-last:border-b-0 *:not-last:before:hidden *:not-first:before:rounded-t-none *:not-last:before:rounded-b-none dark:*:last:before:hidden dark:*:first:before:block',
+        "flex w-fit *:focus-visible:z-10",
+        orientation === "horizontal"
+          ? "*:pointer-coarse:after:min-w-auto"
+          : "*:pointer-coarse:after:min-h-auto",
+        variant === "default"
+          ? "gap-0.5"
+          : orientation === "horizontal"
+            ? "*:not-first:before:-start-[0.5px] *:not-last:before:-end-[0.5px] *:not-first:rounded-s-none *:not-last:rounded-e-none *:not-first:border-s-0 *:not-last:border-e-0 *:not-first:before:rounded-s-none *:not-last:before:rounded-e-none"
+            : "*:not-first:before:-top-[0.5px] *:not-last:before:-bottom-[0.5px] flex-col *:not-first:rounded-t-none *:not-last:rounded-b-none *:not-first:border-t-0 *:not-last:border-b-0 *:not-last:before:hidden *:not-first:before:rounded-t-none *:not-last:before:rounded-b-none dark:*:last:before:hidden dark:*:first:before:block",
         className,
       )}
       data-size={size}
@@ -77,7 +77,7 @@ function Toggle({
 
 function ToggleGroupSeparator({
   className,
-  orientation = 'vertical',
+  orientation = "vertical",
   ...props
 }: {
   className?: string;

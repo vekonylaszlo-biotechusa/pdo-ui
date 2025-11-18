@@ -1,7 +1,7 @@
-import { Slider as SliderPrimitive } from '@base-ui-components/react/slider';
-import * as React from 'react';
+import { Slider as SliderPrimitive } from "@base-ui-components/react/slider";
+import * as React from "react";
 
-import { cn } from '@/lib/utils';
+import { cn } from "../lib/utils";
 
 function Slider({
   className,
@@ -35,7 +35,7 @@ function Slider({
       {children}
       <SliderPrimitive.Control
         className={cn(
-          'flex touch-none select-none data-[disabled]:pointer-events-none data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=horizontal]:w-full data-[orientation=horizontal]:min-w-44 data-[orientation=vertical]:flex-col data-disabled:opacity-64',
+          "flex touch-none select-none data-[disabled]:pointer-events-none data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=horizontal]:w-full data-[orientation=horizontal]:min-w-44 data-[orientation=vertical]:flex-col data-disabled:opacity-64",
           className,
         )}
         data-slot="slider-control"
@@ -64,7 +64,7 @@ function Slider({
 function SliderValue({ className, ...props }: SliderPrimitive.Value.Props) {
   return (
     <SliderPrimitive.Value
-      className={cn('flex justify-end text-sm', className)}
+      className={cn("flex justify-end text-sm", className)}
       data-slot="slider-value"
       {...props}
     />
