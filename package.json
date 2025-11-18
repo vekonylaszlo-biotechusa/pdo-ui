@@ -4,7 +4,7 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
     "./dist/index.css": {
@@ -14,7 +14,7 @@
       "default": "./dist/styles.css"
     }
   },
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
