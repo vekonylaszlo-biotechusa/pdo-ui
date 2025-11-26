@@ -7,7 +7,7 @@ type InputProps = Omit<
   InputPrimitive.Props & React.RefAttributes<HTMLInputElement>,
   "size"
 > & {
-  size?: "sm" | "default" | "lg" | number;
+  size?: "sm" | "default" | "lg" | "touch" | number;
   unstyled?: boolean;
 };
 
@@ -35,6 +35,8 @@ function Input({
           size === "sm" &&
             "px-[calc(--spacing(2.5)-1px)] py-[calc(--spacing(1)-1px)]",
           size === "lg" && "py-[calc(--spacing(2)-1px)]",
+          size === "touch" &&
+            "py-[calc(--spacing(4)-1px)] px-[calc(--spacing(4)-1px)]",
           props.type === "search" &&
             "[&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none",
           props.type === "file" &&

@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 import {
   PauseIcon,
   PlayIcon,
   SkipBackIcon,
   SkipForwardIcon,
   TrashIcon,
-} from 'lucide-react';
-import { useState } from 'react';
-import { Button } from '../src/button';
+} from "lucide-react";
+import { useState } from "react";
+import { Button } from "../src/button";
 import {
   Dialog,
   DialogClose,
@@ -16,7 +16,7 @@ import {
   DialogHeader,
   DialogPopup,
   DialogTitle,
-} from '../src/dialog';
+} from "../src/dialog";
 import {
   Menu,
   MenuCheckboxItem,
@@ -32,15 +32,15 @@ import {
   MenuSubPopup,
   MenuSubTrigger,
   MenuTrigger,
-} from '../src/menu';
+} from "../src/menu";
 
 const meta = {
-  title: 'Example/Menu',
+  title: "Example/Menu",
   component: Menu,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<typeof Menu>;
 
 export default meta;
@@ -162,4 +162,87 @@ export function WithDialogComponent() {
 
 export const WithDialog: Story = {
   render: () => <WithDialogComponent />,
+};
+
+export const Touch: Story = {
+  render: () => (
+    <Menu>
+      <MenuTrigger render={<Button variant="outline" />}>Open menu</MenuTrigger>
+      <MenuPopup>
+        <MenuGroup>
+          <MenuGroupLabel>Playback</MenuGroupLabel>
+          <MenuItem size="touch">
+            <PlayIcon className="opacity-72" />
+            Play
+            <MenuShortcut>⌘P</MenuShortcut>
+          </MenuItem>
+          <MenuItem size="touch" disabled>
+            <PauseIcon className="opacity-72" />
+            Pause
+            <MenuShortcut>⇧⌘P</MenuShortcut>
+          </MenuItem>
+          <MenuItem size="touch">
+            <SkipBackIcon className="opacity-72" />
+            Previous
+            <MenuShortcut>⌘[</MenuShortcut>
+          </MenuItem>
+          <MenuItem size="touch">
+            <SkipForwardIcon className="opacity-72" />
+            Next
+            <MenuShortcut>⌘]</MenuShortcut>
+          </MenuItem>
+        </MenuGroup>
+        <MenuSeparator />
+        <MenuCheckboxItem size="touch">Shuffle</MenuCheckboxItem>
+        <MenuCheckboxItem size="touch">Repeat</MenuCheckboxItem>
+        <MenuCheckboxItem size="touch" disabled>
+          Enhanced Audio
+        </MenuCheckboxItem>
+        <MenuSeparator />
+        <MenuGroup>
+          <MenuGroupLabel>Sort by</MenuGroupLabel>
+          <MenuRadioGroup>
+            <MenuRadioItem size="touch" value="artist">
+              Artist
+            </MenuRadioItem>
+            <MenuRadioItem size="touch" value="album">
+              Album
+            </MenuRadioItem>
+            <MenuRadioItem size="touch" value="title">
+              Title
+            </MenuRadioItem>
+          </MenuRadioGroup>
+        </MenuGroup>
+        <MenuSeparator />
+        <MenuSub>
+          <MenuSubTrigger size="touch">Add to Playlist</MenuSubTrigger>
+          <MenuSubPopup>
+            <MenuItem size="touch">Jazz</MenuItem>
+            <MenuSub>
+              <MenuSubTrigger size="touch">Rock</MenuSubTrigger>
+              <MenuSubPopup>
+                <MenuItem size="touch">Hard Rock</MenuItem>
+                <MenuItem size="touch">Soft Rock</MenuItem>
+                <MenuItem size="touch">Classic Rock</MenuItem>
+                <MenuSeparator />
+                <MenuItem size="touch">Metal</MenuItem>
+                <MenuItem size="touch">Punk</MenuItem>
+                <MenuItem size="touch">Grunge</MenuItem>
+                <MenuItem size="touch">Alternative</MenuItem>
+                <MenuItem size="touch">Indie</MenuItem>
+                <MenuItem size="touch">Electronic</MenuItem>
+              </MenuSubPopup>
+            </MenuSub>
+            <MenuItem size="touch">Pop</MenuItem>
+          </MenuSubPopup>
+        </MenuSub>
+        <MenuSeparator />
+        <MenuItem size="touch" variant="destructive">
+          <TrashIcon />
+          Delete
+          <MenuShortcut>⌘⌫</MenuShortcut>
+        </MenuItem>
+      </MenuPopup>
+    </Menu>
+  ),
 };
