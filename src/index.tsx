@@ -268,3 +268,10 @@ export { ToastProvider, toastManager } from "./toast";
 export type { ToastPosition } from "./toast";
 export { CircularProgress } from "./circular-progress";
 export type { CircularProgressProps } from "./circular-progress";
+export {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionPanel,
+  AccordionTrigger,
+} from "./accordion";
