@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Label } from '../src/label';
-import { Radio, RadioGroup } from '../src/radio-group';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Label } from "../src/label";
+import { Radio, RadioGroup } from "../src/radio-group";
 
 const meta = {
-  title: 'Example/RadioGroup',
+  title: "Example/RadioGroup",
   component: RadioGroup,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<typeof RadioGroup>;
 
 export default meta;
@@ -58,7 +58,7 @@ export const WithDescription: Story = {
 export const CardStyle: Story = {
   render: () => (
     <RadioGroup defaultValue="r-1">
-      <Label className="flex items-start gap-2 rounded-lg border p-3 hover:bg-accent/50 has-data-checked:border-primary/48 has-data-checked:bg-accent/50">
+      <Label className="flex items-start gap-2 rounded-lg border p-3 hover:bg-highlight/50 has-data-checked:border-ring/48 has-data-checked:bg-highlight/50">
         <Radio value="r-1" />
         <div className="flex flex-col gap-1">
           <p className="text-sm leading-4">Email</p>
@@ -67,7 +67,7 @@ export const CardStyle: Story = {
           </p>
         </div>
       </Label>
-      <Label className="flex items-start gap-2 rounded-lg border p-3 hover:bg-accent/50 has-data-checked:border-primary/48 has-data-checked:bg-accent/50">
+      <Label className="flex items-start gap-2 rounded-lg border p-3 hover:bg-highlight/50 has-data-checked:border-ring/48 has-data-checked:bg-highlight/50">
         <Radio value="r-2" />
         <div className="flex flex-col gap-1">
           <p className="text-sm leading-4">SMS</p>

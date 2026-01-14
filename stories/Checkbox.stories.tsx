@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Checkbox } from '../src/checkbox';
-import { Label } from '../src/label';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Checkbox } from "../src/checkbox";
+import { Label } from "../src/label";
 
 const meta = {
-  title: 'Example/Checkbox',
+  title: "Example/Checkbox",
   component: Checkbox,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
@@ -39,7 +39,7 @@ export const WithDescription: Story = {
 
 export const CardStyle: Story = {
   render: () => (
-    <Label className="flex items-start gap-2 rounded-lg border p-3 hover:bg-accent/50 has-data-checked:border-primary/48 has-data-checked:bg-accent/50">
+    <Label className="flex items-start gap-2 rounded-lg border p-3 hover:bg-highlight/50 has-data-checked:border-ring/48 has-data-checked:bg-highlight/50">
       <Checkbox defaultChecked />
       <div className="flex flex-col gap-1">
         <p className="text-sm leading-4">Enable notifications</p>
