@@ -23,14 +23,14 @@ export default defineConfig({
   output: {
     target: "web",
     emitCss: true,
-    // copy: {
-    //   patterns: [
-    //     {
-    //       from: "./src/styles.css",
-    //       to: "./styles.css",
-    //     },
-    //   ],
-    // },
+    copy: {
+      patterns: [
+        {
+          from: "./src/styles.css",
+          to: "./index.css",
+        },
+      ],
+    },
   },
   plugins: [pluginReact()],
   tools: {
