@@ -26,7 +26,7 @@ export default defineConfig({
     copy: {
       patterns: [
         {
-          from: "./src/index.css",
+          from: "./src/styles.css",
           to: "./styles.css",
         },
       ],

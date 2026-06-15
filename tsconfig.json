@@ -9,10 +9,10 @@
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["./*"],
+    },
+    "rootDir": "../",
   },
-  "include": ["src"]
+  "include": ["src", "global.d.ts"],
 }

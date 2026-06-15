@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {},
   render: (args) => (
-    <div className="w-[480px]">
+    <div className="w-120">
       <Accordion className="w-full">
         <AccordionItem value="item-1">
           <AccordionTrigger>What is Base UI?</AccordionTrigger>

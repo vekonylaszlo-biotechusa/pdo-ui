@@ -1,4 +1,4 @@
-import "./index.css";
+import "./styles.css";
 
 export { Alert, AlertAction, AlertDescription, AlertTitle } from "./alert";
 export {
