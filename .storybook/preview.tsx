@@ -14,8 +14,12 @@ export const decorator: Decorator = (Story, context) => {
       data-theme={theme}
       style={{
         background: "var(--background)",
-        height: "100%",
         width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <Story />

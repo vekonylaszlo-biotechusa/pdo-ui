@@ -13,9 +13,9 @@ const badgeVariants = cva(
     },
     variants: {
       size: {
-        default: "px-[calc(--spacing(1)-1px)] text-xs",
-        lg: "px-[calc(--spacing(1.5)-1px)] text-sm",
-        sm: "rounded-[calc(var(--radius-sm)-2px)] px-[calc(--spacing(1)-1px)] text-[.625rem]",
+        default: "px-1.5 py-0.5 text-xs",
+        lg: "px-2 text-sm",
+        sm: "rounded-[calc(var(--radius-sm)-3px)] px-1 text-[.625rem]",
       },
       variant: {
         default:

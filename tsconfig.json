@@ -14,5 +14,5 @@
     },
     "rootDir": "../",
   },
-  "include": ["src", "global.d.ts"],
+  "include": ["src", "**/*.d.ts"],
 }

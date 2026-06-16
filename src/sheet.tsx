@@ -27,7 +27,7 @@ const sheetPopupVariants = cva(
     },
     variants: {
       inset: {
-        true: "sm:rounded-xl sm:[--sheet-inset:1rem]",
+        true: "sm:rounded-lg sm:[--sheet-inset:1rem]",
       },
       side: {
         bottom:

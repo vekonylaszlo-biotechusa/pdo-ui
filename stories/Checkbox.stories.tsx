@@ -39,7 +39,7 @@ export const WithDescription: Story = {
 
 export const CardStyle: Story = {
   render: () => (
-    <Label className="flex items-start gap-2 rounded-lg border p-3 hover:bg-highlight/50 has-data-checked:border-ring/48 has-data-checked:bg-highlight/50">
+    <Label className="flex items-start gap-2 rounded-lg border p-3 hover:bg-highlight has-data-checked:border-ring/48 has-data-checked:bg-card">
       <Checkbox defaultChecked />
       <div className="flex flex-col gap-1">
         <p className="text-sm leading-4">Enable notifications</p>
