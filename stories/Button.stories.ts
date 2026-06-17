@@ -1,17 +1,17 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from 'storybook/test';
-import { Button } from '../src/button';
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "storybook/test";
+import { Button } from "../src/button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/Button',
+  title: "Example/Button",
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    layout: "centered",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
 
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
@@ -23,84 +23,91 @@ type Story = StoryObj<typeof meta>;
 
 export const Touch: Story = {
   args: {
-    size: 'touch',
-    children: 'Touch',
+    size: "touch",
+    children: "Touch",
   },
 };
 
 export const ExtraLarge: Story = {
   args: {
-    size: 'xl',
-    children: 'Extra Large',
+    size: "xl",
+    children: "Extra Large",
   },
 };
 
 export const Large: Story = {
   args: {
-    size: 'lg',
-    children: 'Large',
+    size: "lg",
+    children: "Large",
   },
 };
 
 export const ExtraSmall: Story = {
   args: {
-    size: 'xs',
-    children: 'Extra Small',
+    size: "xs",
+    children: "Extra Small",
   },
 };
 
 export const Small: Story = {
   args: {
-    size: 'sm',
-    children: 'Small',
+    size: "sm",
+    children: "Small",
   },
 };
 
 export const Link: Story = {
   args: {
-    variant: 'link',
-    children: 'Link',
+    variant: "link",
+    children: "Link",
   },
 };
 
 export const Ghost: Story = {
   args: {
-    variant: 'ghost',
-    children: 'Ghost',
+    variant: "ghost",
+    children: "Ghost",
   },
 };
 
 export const DestructiveOutline: Story = {
   args: {
-    variant: 'destructive-outline',
-    children: 'Destructive outline',
+    variant: "destructive-outline",
+    children: "Destructive outline",
   },
 };
 
 export const Destructive: Story = {
   args: {
-    variant: 'destructive',
-    children: 'Destructive',
+    variant: "destructive",
+    children: "Destructive",
   },
 };
 
 export const Primary: Story = {
   args: {
-    variant: 'default',
-    children: 'Primary',
+    variant: "default",
+    children: "Primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    variant: 'secondary',
-    children: 'Secondary',
+    variant: "secondary",
+    children: "Secondary",
   },
 };
 
 export const Outline: Story = {
   args: {
-    variant: 'outline',
-    children: 'Outline',
+    variant: "outline",
+    children: "Outline",
+  },
+};
+
+export const Test: Story = {
+  args: {
+    variant: "test",
+    children: "Test",
   },
 };

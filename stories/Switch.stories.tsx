@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Label } from '../src/label';
-import { Switch } from '../src/switch';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Label } from "../src/label";
+import { Switch } from "../src/switch";
 
 const meta = {
-  title: 'Example/Switch',
+  title: "Example/Switch",
   component: Switch,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<typeof Switch>;
 
 export default meta;
@@ -40,7 +40,7 @@ export const WithDescription: Story = {
 export const CardStyle: Story = {
   render: () => (
     <Label
-      className="flex items-center gap-6 rounded-lg border p-3 hover:bg-accent/50 has-data-checked:border-primary/48 has-data-checked:bg-accent/50"
+      className="flex items-center gap-6 rounded-lg border border-border p-3 hover:bg-card has-data-checked:bg-card"
       htmlFor="sw2"
     >
       <div className="flex flex-col gap-1">

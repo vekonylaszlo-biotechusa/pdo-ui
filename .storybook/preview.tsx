@@ -52,6 +52,10 @@ const preview: Preview = {
             value: "dark",
             title: "Dark",
           },
+          {
+            value: "marathon",
+            title: "Marathon",
+          },
         ],
       },
     },
