@@ -30,7 +30,7 @@ const buttonVariants = cva(
       },
       variant: {
         default:
-          "text-primary-foreground bg-gradient-to-b from-primary-from to-primary-to hover:bg-primary active:shadow-primary-active shadow-primary border-none active:scale-[0.97]",
+          "text-primary-foreground bg-gradient-to-b from-primary-from from-[0%] via-primary-via via-[45%] to-primary-to to-[100%] hover:bg-primary active:shadow-primary-active shadow-primary border-none active:scale-[0.97]",
         destructive:
           "not-disabled:inset-shadow-[0_1px_--theme(--color-white/16%)] border-destructive bg-destructive text-white shadow-destructive/24 shadow-xs hover:bg-destructive/90 [&:is(:active,[data-pressed])]:inset-shadow-[0_1px_--theme(--color-black/8%)] [&:is(:disabled,:active,[data-pressed])]:shadow-none",
         "destructive-outline":

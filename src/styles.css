@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 :root {
-    --accent: oklch(0.69 0.17 242.45);
+    --accent: oklch(0.68 0.22 140);
     --accent-foreground: oklch(0.205 0 0);
     --background: oklch(1 0 0);
     --foreground: oklch(from var(--accent) 0.25 c h);
@@ -10,17 +10,18 @@
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
+
     /* PRIMARY */
-    --primary: oklch(from var(--accent) 0.1 c h);
+    --primary: var(--accent);
     --primary-foreground: oklch(0.95 0.01 319.45);
-    --primary-from: oklch(from var(--accent) l c h);
-    --primary-to: oklch(from var(--accent) 0.48 c h);
+    --primary-from: oklch(from var(--accent) calc(l + 0.06) calc(c + 0.02) h);
+    --primary-via: var(--accent);
+    --primary-to: oklch(from var(--accent) calc(l - 0.15) c h);
     --primary-from-active: oklch(from var(--accent) l c h);
     --primary-to-active: oklch(from var(--accent) l c h);
     --shadow-primary:
-        inset 0 1px 0 oklch(from var(--accent) 0.65 c h),
-        inset 0 -1px 0 oklch(from var(--accent) 0.25 c h),
-        0 1px 3px oklch(from var(--accent) 0.23 c h / 0.5);
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        0 8px 12px rgba(80, 80, 80, 0.2);
     --shadow-primary-active: inset 0 0 1px 1px
         oklch(from var(--accent) 0.25 c h / 0.55);
     /* PRIMARY */
@@ -84,8 +85,9 @@
     /* PRIMARY */
     --primary: oklch(from var(--accent) 0.1 c h);
     --primary-foreground: oklch(0.95 0.01 319.45);
-    --primary-from: oklch(from var(--accent) 0.65 c h);
-    --primary-to: oklch(from var(--accent) 0.45 c h);
+    --primary-from: oklch(from var(--accent) calc(l + 0.06) calc(c + 0.02) h);
+    --primary-via: var(--accent);
+    --primary-to: oklch(from var(--accent) calc(l - 0.2) c h);
     --primary-from-active: oklch(from var(--accent) l c h);
     --primary-to-active: oklch(from var(--accent) l c h);
     --shadow-primary: 0 1px 3px oklch(from var(--accent) 0.13 0.5 h);
@@ -143,8 +145,9 @@
     /* PRIMARY */
     --primary: oklch(0.86 0.22 125.76);
     --primary-foreground: oklch(0.205 0 0);
-    --primary-from: oklch(0.64 0.2 140.42);
-    --primary-to: oklch(0.52 0.16 145.21);
+    --primary-from: oklch(from var(--accent) calc(l + 0.06) calc(c + 0.02) h);
+    --primary-via: var(--accent);
+    --primary-to: oklch(from var(--accent) calc(l - 0.2) c h);
     --shadow-primary: inset 0 1px 0 rgba(255, 255, 255, 0.15);
     --shadow-primary-active: none;
     /* PRIMARY */
@@ -206,6 +209,7 @@
     --color-primary: var(--primary);
     --color-primary-foreground: var(--primary-foreground);
     --color-primary-from: var(--primary-from);
+    --color-primary-via: var(--primary-via);
     --color-primary-to: var(--primary-to);
     --color-primary-from-active: var(--primary-from-active);
     --color-primary-to-active: var(--primary-to-active);
