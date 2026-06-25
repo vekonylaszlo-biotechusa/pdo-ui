@@ -10,9 +10,9 @@
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./*"]
     },
-    "rootDir": "../",
+    "rootDir": "./src"
   },
-  "include": ["src", "**/*.d.ts"],
+  "include": ["src", "**/*.d.ts"]
 }
