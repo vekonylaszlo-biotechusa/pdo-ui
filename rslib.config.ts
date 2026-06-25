@@ -1,33 +1,38 @@
-import { pluginReact } from "@rsbuild/plugin-react";
-import path from "node:path";
-import { defineConfig } from "@rslib/core";
+import path from 'node:path';
+import { pluginReact } from '@rsbuild/plugin-react';
+import { defineConfig } from '@rslib/core';
 
 export default defineConfig({
   source: {
     entry: {
-      index: ["./src/**"],
+      index: ['./src/**'],
     },
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname),
+      '@': path.resolve(__dirname),
     },
   },
   lib: [
     {
       bundle: false,
       dts: true,
-      format: "esm",
+      format: 'esm',
+      redirect: {
+        dts: {
+          extension: true,
+        },
+      },
     },
   ],
   output: {
-    target: "web",
+    target: 'web',
     emitCss: true,
     copy: {
       patterns: [
         {
-          from: "./src/styles.css",
-          to: "./index.css",
+          from: './src/styles.css',
+          to: './index.css',
         },
       ],
     },
@@ -41,10 +46,10 @@ export default defineConfig({
             test: /\.css$/,
             use: [
               {
-                loader: "postcss-loader",
+                loader: 'postcss-loader',
                 options: {
                   postcssOptions: {
-                    config: "./postcss.config.mjs",
+                    config: './postcss.config.mjs',
                   },
                 },
               },
