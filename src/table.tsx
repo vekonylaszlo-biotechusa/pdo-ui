@@ -50,7 +50,7 @@ function TableFooter({ className, ...props }: React.ComponentProps<"tfoot">) {
   return (
     <tfoot
       className={cn(
-        "border-t in-data-[slot=frame]:border-none bg-muted/72 in-data-[slot=frame]:bg-transparent font-medium [&>tr]:last:border-b-0 in-data-[slot=frame]:*:[tr]:hover:bg-transparent",
+        "border-t in-data-[slot=frame]:border-none bg-secondary in-data-[slot=frame]:bg-transparent font-medium [&>tr]:last:border-b-0 in-data-[slot=frame]:*:[tr]:hover:bg-transparent",
         className,
       )}
       data-slot="table-footer"
@@ -63,7 +63,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   return (
     <tr
       className={cn(
-        "border-b transition-colors hover:bg-muted in-data-[slot=frame]:hover:bg-transparent data-[state=selected]:bg-muted in-data-[slot=frame]:data-[state=selected]:bg-transparent",
+        "border-b transition-colors hover:bg-highlight hover:text-highlight-foreground in-data-[slot=frame]:hover:bg-transparent data-[state=selected]:bg-highlight in-data-[slot=frame]:data-[state=selected]:bg-transparent",
         className,
       )}
       data-slot="table-row"

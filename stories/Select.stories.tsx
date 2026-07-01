@@ -1,36 +1,36 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 import {
   ClockIcon,
   Code2Icon,
   GlobeIcon,
   LayersIcon,
   ZapIcon,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from '../src/select';
+} from "../src/select";
 
 const meta = {
-  title: 'Example/Select',
+  title: "Example/Select",
   component: Select,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<typeof Select>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 const items = [
-  { label: 'Select framework', value: null },
-  { label: 'Next.js', value: 'next' },
-  { label: 'Vite', value: 'vite' },
-  { label: 'Astro', value: 'astro' },
+  { label: "Select framework", value: null },
+  { label: "Next.js", value: "next" },
+  { label: "Vite", value: "vite" },
+  { label: "Astro", value: "astro" },
 ];
 
 export const Default: Story = {
@@ -51,26 +51,26 @@ export const Default: Story = {
 };
 
 const languages = {
-  cpp: 'C++',
-  csharp: 'C#',
-  go: 'Go',
-  java: 'Java',
-  javascript: 'JavaScript',
-  php: 'PHP',
-  python: 'Python',
-  rust: 'Rust',
-  swift: 'Swift',
-  typescript: 'TypeScript',
+  cpp: "C++",
+  csharp: "C#",
+  go: "Go",
+  java: "Java",
+  javascript: "JavaScript",
+  php: "PHP",
+  python: "Python",
+  rust: "Rust",
+  swift: "Swift",
+  typescript: "TypeScript",
 };
 type Language = keyof typeof languages;
 const values = Object.keys(languages) as Language[];
 function renderValue(value: Language[]) {
   if (value.length === 0) {
-    return 'Select languages…';
+    return "Select languages…";
   }
-  const firstLanguage = value[0] ? languages[value[0]] : '';
+  const firstLanguage = value[0] ? languages[value[0]] : "";
   const additionalLanguages =
-    value.length > 1 ? ` (+${value.length - 1} more)` : '';
+    value.length > 1 ? ` (+${value.length - 1} more)` : "";
   return firstLanguage + additionalLanguages;
 }
 
@@ -78,10 +78,31 @@ export const Multiple: Story = {
   render: () => (
     <Select
       aria-label="Select languages"
-      defaultValue={['javascript', 'typescript']}
+      defaultValue={["javascript", "typescript"]}
       multiple
     >
       <SelectTrigger>
+        <SelectValue>{renderValue}</SelectValue>
+      </SelectTrigger>
+      <SelectPopup alignItemWithTrigger={false}>
+        {values.map((value) => (
+          <SelectItem key={value} value={value}>
+            {languages[value]}
+          </SelectItem>
+        ))}
+      </SelectPopup>
+    </Select>
+  ),
+};
+
+export const CustomTrigger: Story = {
+  render: () => (
+    <Select
+      aria-label="Select languages"
+      defaultValue={["javascript", "typescript"]}
+      multiple
+    >
+      <SelectTrigger className="rounded-full border-none shadow-none dark:not-data-disabled:not-focus-visible:not-aria-invalid:not-data-pressed:before:shadow-none   not-data-disabled:not-focus-visible:not-aria-invalid:not-data-pressed:before:shadow-none bg-transparent hover:bg-highlight [&_[data-slot=select-icon]]:hidden">
         <SelectValue>{renderValue}</SelectValue>
       </SelectTrigger>
       <SelectPopup alignItemWithTrigger={false}>
@@ -114,10 +135,10 @@ export const WithIcon: Story = {
 };
 
 const itemsWIcons = [
-  { icon: LayersIcon, label: 'Components', value: 'components' },
-  { icon: ZapIcon, label: 'Performance', value: 'performance' },
-  { icon: GlobeIcon, label: 'Network', value: 'network' },
-  { icon: Code2Icon, label: 'Development', value: 'development' },
+  { icon: LayersIcon, label: "Components", value: "components" },
+  { icon: ZapIcon, label: "Performance", value: "performance" },
+  { icon: GlobeIcon, label: "Network", value: "network" },
+  { icon: Code2Icon, label: "Development", value: "development" },
 ];
 
 export const OptionsWithIcon: Story = {
@@ -152,10 +173,10 @@ export const OptionsWithIcon: Story = {
 };
 
 const itemsWObjects = [
-  { description: 'npx create-next-app', label: 'Next.js', value: 'next' },
-  { description: 'npm create vite@latest', label: 'Vite', value: 'vite' },
-  { description: 'npm create astro@latest', label: 'Astro', value: 'astro' },
-  { description: 'npx create-remix', label: 'Remix', value: 'remix' },
+  { description: "npx create-next-app", label: "Next.js", value: "next" },
+  { description: "npm create vite@latest", label: "Vite", value: "vite" },
+  { description: "npm create astro@latest", label: "Astro", value: "astro" },
+  { description: "npx create-remix", label: "Remix", value: "remix" },
 ];
 
 export const WithObjects: Story = {
