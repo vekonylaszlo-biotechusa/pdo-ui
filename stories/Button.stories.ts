@@ -84,6 +84,20 @@ export const Destructive: Story = {
   },
 };
 
+export const Warning: Story = {
+  args: {
+    variant: "warning",
+    children: "Warning",
+  },
+};
+
+export const Success: Story = {
+  args: {
+    variant: "success",
+    children: "Success",
+  },
+};
+
 export const Primary: Story = {
   args: {
     variant: "default",

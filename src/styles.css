@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 :root {
-    --accent: oklch(0.68 0.22 140);
+    --accent: oklch(0.56 0.16 240.67);
     --accent-foreground: oklch(0.205 0 0);
     --background: oklch(1 0 0);
     --foreground: oklch(from var(--accent) 0.25 c h);
@@ -12,32 +12,53 @@
     --popover-foreground: oklch(0.145 0 0);
 
     /* PRIMARY */
-    --primary: var(--accent);
-    --primary-foreground: oklch(0.95 0.01 319.45);
-    --primary-from: oklch(from var(--accent) calc(l + 0.06) calc(c + 0.02) h);
-    --primary-via: var(--accent);
-    --primary-to: oklch(from var(--accent) calc(l - 0.15) c h);
-    --primary-from-active: oklch(from var(--accent) l c h);
-    --primary-to-active: oklch(from var(--accent) l c h);
+    --primary: oklch(from var(--accent) l calc(c + 0.02) h);
+    --primary-foreground: oklch(1 0 0);
     --shadow-primary:
-        inset 0 1px 0 rgba(255, 255, 255, 0.25),
-        0 8px 12px rgba(80, 80, 80, 0.2);
-    --shadow-primary-active: inset 0 0 1px 1px
-        oklch(from var(--accent) 0.25 c h / 0.55);
+        inset 0 0 0 1px #2b314313, 0 0 0 0px #4575cd26,
+        inset 0 -1px 0 rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.25),
+        0 2px 4px rgba(0, 0, 0, 0.1);
     /* PRIMARY */
 
     /* SECONDARY */
     --secondary: oklch(0.99 0 0);
     --secondary-foreground: oklch(from var(--accent) 0.2 c h);
-    --secondary-border: oklch(0.88 0 0);
-    --shadow-secondary: 0 2px 3px oklch(0.708 0 0 / 0.2);
+    --shadow-secondary:
+        0 0 0 1px #2b314313,
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd26),
+        0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
     --shadow-secondary-active: none;
     /* SECONDARY */
 
+    /* DESTRUCTIVE */
+    --destructive: oklch(0.6 0.18 12.91);
+    --destructive-foreground: oklch(1 0 0);
+    --shadow-destructive:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #a30000, inset 0 0 0 1px #cd0000,
+        0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
+    /* DESTRUCTIVE */
+
+    /* WARNING */
+    --warning: oklch(0.61 0.17 40.52);
+    --warning-foreground: oklch(1 0 0);
+    --shadow-warning:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #d45622, inset 0 0 0 1px #e16d2c,
+        0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
+    /* WARNING */
+
+    /* SUCCESS */
+    --success: oklch(0.69 0.12 165.47);
+    --success-foreground: oklch(1 0 0);
+    --shadow-success:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #2d997c, inset 0 0 0 1px #60cc9a,
+        0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
+    /* SUCCESS */
+
     --muted: oklch(0.97 0 0);
     --muted-foreground: oklch(from var(--accent) 0.65 0.015 h);
-    --destructive: oklch(0.577 0.245 27.325);
-    --destructive-foreground: oklch(0.577 0.245 27.325);
     --border: oklch(0.922 0 0);
     --input: oklch(0.922 0 0);
     --ring: oklch(0.708 0 0);
@@ -72,10 +93,10 @@
 }
 
 [data-theme="dark"] {
-    --accent: oklch(0.57 0.19 141.34);
+    --accent: oklch(0.57 0.15 261.44);
     --accent-foreground: oklch(0.985 0 0);
 
-    --background: oklch(0.13 0 0);
+    --background: oklch(0.2 0.02 264.1);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.145 0 0);
     --card-foreground: oklch(0.985 0 0);
@@ -83,31 +104,59 @@
     --popover-foreground: oklch(0.985 0 0);
 
     /* PRIMARY */
-    --primary: oklch(from var(--accent) 0.1 c h);
+    --primary: oklch(from var(--accent) l calc(c + 0.02) h);
     --primary-foreground: oklch(0.95 0.01 319.45);
-    --primary-from: oklch(from var(--accent) calc(l + 0.06) calc(c + 0.02) h);
-    --primary-via: var(--accent);
-    --primary-to: oklch(from var(--accent) calc(l - 0.2) c h);
-    --primary-from-active: oklch(from var(--accent) l c h);
-    --primary-to-active: oklch(from var(--accent) l c h);
-    --shadow-primary: 0 1px 3px oklch(from var(--accent) 0.13 0.5 h);
-    --shadow-primary-active: inset 0 0 1px 1px
-        oklch(from var(--accent) 0.55 c h);
+    --shadow-primary:
+        inset 0 0 0 1px #787d9313,
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd26),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.5),
+        0 2px 4px rgba(0, 0, 0, 0.25);
 
     /* PRIMARY */
 
     /* SECONDARY */
-    --secondary: oklch(0.269 0 0);
+    --secondary: oklch(0.23 0.01 278.03);
     --secondary-foreground: oklch(0.985 0 0);
-    --secondary-border: oklch(0.15 0 0);
-    --shadow-secondary: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-    --shadow-secondary-active: none;
+    --shadow-secondary:
+        inset 0 0 0 1px #31333c,
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd26),
+        inset 0 1px 0 rgba(255, 255, 255, 0.075),
+        inset 0 2px 4px rgba(255, 255, 255, 0.025),
+        0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.25);
     /* SECONDARY */
+
+    /*DESTRUCTIVE*/
+    --destructive: oklch(0.6 0.18 12.91);
+    --destructive-foreground: oklch(1 0 0);
+    --shadow-destructive:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #ff5a85, inset 0 0 0 1px #ea4868,
+        inset 0 1px 0 rgba(255, 255, 255, 0.075),
+        inset 0 2px 4px rgba(255, 255, 255, 0.025),
+        0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.25);
+    /*DESTRUCTIVE*/
+
+    /* WARNING */
+    --warning: oklch(0.61 0.17 40.52);
+    --warning-foreground: oklch(1 0 0);
+    --shadow-warning:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #d45622, inset 0 0 0 1px #e16d2c,
+        0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
+    /* WARNING */
+
+    /* SUCCESS */
+    --success: oklch(0.69 0.12 165.47);
+    --success-foreground: oklch(1 0 0);
+    --shadow-success:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #2d997c, inset 0 0 0 1px #60cc9a,
+        0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
+    /* SUCCESS */
 
     --muted: oklch(0.22 0 286.24);
     --muted-foreground: oklch(0.708 0 0);
-    --destructive: oklch(0.396 0.141 25.723);
-    --destructive-foreground: oklch(0.637 0.237 25.331);
     --border: oklch(0.269 0 0);
     --input: oklch(0.269 0 0);
     --ring: oklch(0.439 0 0);
@@ -146,30 +195,38 @@
     /* PRIMARY */
     --color-primary: var(--primary);
     --color-primary-foreground: var(--primary-foreground);
-    --color-primary-from: var(--primary-from);
-    --color-primary-via: var(--primary-via);
-    --color-primary-to: var(--primary-to);
-    --color-primary-from-active: var(--primary-from-active);
-    --color-primary-to-active: var(--primary-to-active);
     --shadow-primary: var(--shadow-primary);
-    --shadow-primary-active: var(--shadow-primary-active);
     /* PRIMARY */
 
     /* SECONDARY */
     --color-secondary: var(--secondary);
     --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary-border: var(--secondary-border);
-
     --shadow-secondary: var(--shadow-secondary);
-    --shadow-secondary-active: var(--shadow-secondary-active);
     /* SECONDARY */
+
+    /*DESTRUCTIVE*/
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --shadow-destructive: var(--shadow-destructive);
+    /*DESTRUCTIVE*/
+
+    /*WARNING*/
+    --color-warning: var(--warning);
+    --color-warning-foreground: var(--warning-foreground);
+    --shadow-warning: var(--shadow-warning);
+    /*WARNING*/
+
+    /*SUCCESS*/
+    --color-success: var(--success);
+    --color-success-foreground: var(--success-foreground);
+    --shadow-success: var(--shadow-success);
+    /*SUCCESS*/
 
     --color-muted: var(--muted);
     --color-muted-foreground: var(--muted-foreground);
     --color-accent: var(--accent);
     --color-accent-foreground: var(--accent-foreground);
-    --color-destructive: var(--destructive);
-    --color-destructive-foreground: var(--destructive-foreground);
+
     --color-border: var(--border);
     --color-input: var(--input);
     --color-ring: var(--ring);
