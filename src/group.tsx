@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
 
 import { cn } from "./lib/utils";
-import { Separator } from "../src/separator";
+import { Separator } from "./separator";
 
 const groupVariants = cva(
   "flex w-fit *:focus-visible:z-10 has-[>[data-slot=group]]:gap-2 *:has-focus-visible:z-10",
