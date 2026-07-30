@@ -19,7 +19,7 @@ function FramePanel({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "relative not-has-[table]:rounded-lg not-has-[table]:bg-card bg-clip-padding not-has-[table]:p-5 not-has-[table]:shadow-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] has-[table]:before:hidden",
+        "relative not-has-[table]:rounded-lg not-has-[table]:bg-card  not-has-[table]:p-5 not-has-[table]:shadow-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-depth has-[table]:before:hidden",
         className,
       )}
       data-slot="frame-panel"

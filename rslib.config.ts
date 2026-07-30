@@ -31,6 +31,10 @@ export default defineConfig({
         },
       ],
     },
+    externals: {
+      react: "react",
+      "react-dom": "react-dom",
+    },
   },
   plugins: [pluginReact()],
   tools: {

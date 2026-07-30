@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "./lib/utils";
 
 const badgeVariants = cva(
-  "relative inline-flex shrink-0 items-center justify-center gap-1 whitespace-nowrap rounded-sm border border-transparent font-medium outline-none transition-shadow focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-64 [&_svg:not([class*='size-'])]:size-3 [&_svg]:pointer-events-none [&_svg]:shrink-0 [button,a&]:cursor-pointer [button,a&]:pointer-coarse:after:absolute [button,a&]:pointer-coarse:after:size-full [button,a&]:pointer-coarse:after:min-h-11 [button,a&]:pointer-coarse:after:min-w-11",
+  "relative inline-flex shrink-0 items-center justify-center gap-1 whitespace-nowrap rounded-xs border border-transparent font-medium outline-none transition-shadow focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-disabled [&_svg:not([class*='size-'])]:size-3 [&_svg]:pointer-events-none [&_svg]:shrink-0 [button,a&]:cursor-pointer [button,a&]:pointer-coarse:after:absolute [button,a&]:pointer-coarse:after:size-full [button,a&]:pointer-coarse:after:min-h-11 [button,a&]:pointer-coarse:after:min-w-11",
   {
     defaultVariants: {
       size: "default",
@@ -23,14 +23,14 @@ const badgeVariants = cva(
         destructive:
           "bg-destructive text-white [button,a&]:hover:bg-destructive/90",
         error:
-          "bg-destructive/8 text-destructive-foreground dark:bg-destructive/16",
+          "bg-destructive text-destructive-foreground",
         info: "bg-info/8 text-info-foreground dark:bg-info/16",
         outline:
-          "border-border bg-transparent dark:bg-input/32 [button,a&]:hover:bg-highlight/50 dark:[button,a&]:hover:bg-input/48",
+          "border-border bg-transparent bg-surface-tint [button,a&]:hover:bg-highlight/50 [button,a&]:hover:bg-surface-tint-hover",
         secondary:
           "bg-secondary text-secondary-foreground [button,a&]:hover:bg-secondary/90",
-        success: "bg-success/8 text-success-foreground dark:bg-success/16",
-        warning: "bg-warning/8 text-warning-foreground dark:bg-warning/16",
+        success: "bg-success text-success-foreground",
+        warning: "bg-warning text-warning-foreground",
       },
     },
   },

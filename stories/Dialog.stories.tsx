@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { useState } from 'react';
+import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -8,30 +8,31 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from '../src/alert-dialog';
-import { Button } from '../src/button';
+} from "../src/alert-dialog";
+import { Button } from "../src/button";
 import {
   Dialog,
   DialogClose,
+  DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogPopup,
   DialogTitle,
   DialogTrigger,
-} from '../src/dialog';
-import { Input } from '../src/input';
-import { Label } from '../src/label';
-import { Textarea } from '../src/textarea';
-import { WithDialogComponent } from './Menu.stories';
+} from "../src/dialog";
+import { Input } from "../src/input";
+import { Label } from "../src/label";
+import { Textarea } from "../src/textarea";
+import { WithDialogComponent } from "./Menu.stories";
 
 const meta = {
-  title: 'Example/Dialog',
+  title: "Example/Dialog",
   component: Dialog,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<typeof Dialog>;
 
 export default meta;
@@ -50,12 +51,12 @@ export const Default: Story = {
             Make changes to your profile here. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
-        <div className="flex flex-col gap-4">
+        <DialogContent>
           <Label>Name</Label>
           <Input defaultValue="Margaret Welsh" type="text" />
           <Label>Username</Label>
           <Input defaultValue="@maggie.welsh" type="text" />
-        </div>
+        </DialogContent>
         <DialogFooter>
           <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
           <Button type="submit">Save</Button>
@@ -127,7 +128,7 @@ export const Nested: Story = {
 function DialogCloseConfirmationDemo() {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   return (
     <Dialog
       onOpenChange={(o) => {
@@ -153,7 +154,7 @@ function DialogCloseConfirmationDemo() {
           <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
           <Button
             onClick={() => {
-              setValue('');
+              setValue("");
               setDialogOpen(false);
             }}
           >
@@ -177,7 +178,7 @@ function DialogCloseConfirmationDemo() {
             <Button
               onClick={() => {
                 setConfirmOpen(false);
-                setValue('');
+                setValue("");
                 setDialogOpen(false);
               }}
             >

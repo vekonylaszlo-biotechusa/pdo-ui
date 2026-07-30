@@ -53,8 +53,8 @@ const preview: Preview = {
             title: "Dark",
           },
           {
-            value: "ws",
-            title: "WS",
+            value: "oblivion",
+            title: "Oblivion",
           },
         ],
       },

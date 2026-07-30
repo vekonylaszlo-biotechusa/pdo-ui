@@ -71,7 +71,7 @@ export function CircularProgress({
       />
 
       <circle
-        className="transition-colors duration-300"
+        className="transition-colors duration-slow"
         cx="7"
         cy="7"
         r={r}

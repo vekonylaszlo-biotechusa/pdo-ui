@@ -40,20 +40,20 @@
     /* DESTRUCTIVE */
 
     /* WARNING */
-    --warning: oklch(0.61 0.17 40.52);
+    --warning: oklch(0.65 0.19 41.52);
     --warning-foreground: oklch(1 0 0);
     --shadow-warning:
         0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
-        inset 0 -1px 0 #d45622, inset 0 0 0 1px #e16d2c,
+        inset 0 -1px 0 #b64710, inset 0 0 0 1px #ffa216,
         0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
     /* WARNING */
 
     /* SUCCESS */
-    --success: oklch(0.69 0.12 165.47);
+    --success: oklch(0.72 0.19 149.58);
     --success-foreground: oklch(1 0 0);
     --shadow-success:
         0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
-        inset 0 -1px 0 #2d997c, inset 0 0 0 1px #60cc9a,
+        inset 0 -1px 0 #1b9145, inset 0 0 0 1px #2cea70,
         0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
     /* SUCCESS */
 
@@ -86,6 +86,45 @@
     --radius-lg: 9px;
     --radius-md: 8px;
     --radius-sm: 7px;
+
+    /* ---- Elevation shadows (overridden per theme) ---- */
+    --elevation-xs: 0 1px 2px rgb(0 0 0 / 0.05);
+    --elevation-sm: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --elevation-md:
+        0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --elevation-lg:
+        0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    /* ---- Depth shadow (::before pseudo-element pattern) ---- */
+    --depth-shadow: 0 1px rgba(0, 0, 0, 0.04);
+
+    /* ---- Opacity ---- */
+    --opacity-disabled: 0.64;
+    --opacity-subtle: 0.72;
+
+    /* ---- Radii ---- */
+    --radius-xs: 5px;
+    --radius-2xs: 4px;
+    --radius-3xs: 2px;
+
+    /* ---- Animation durations ---- */
+    --duration-fast: 100ms;
+    --duration-normal: 200ms;
+    --duration-slow: 300ms;
+    --duration-slower: 500ms;
+
+    /* ---- Surface tint (replaces dark:bg-input/32) ---- */
+    --surface-tint: transparent;
+    --surface-tint-hover: transparent;
+    --surface-tint-active: transparent;
+
+    /* ---- Backdrop ---- */
+    --backdrop: rgb(0 0 0 / 0.32);
+    --backdrop-accent: oklch(from var(--accent) 0.09 c h / 0.3);
+    --panel-blur: 4px;
+
+    /* ---- Bg-clip mode (padding-box light, border-box dark) ---- */
+    --bg-clip-mode: padding-box;
 }
 
 [data-theme="dark"] {
@@ -174,6 +213,144 @@
 
     --info: var(--color-blue-500);
     --info-foreground: var(--color-blue-400);
+
+    /* ---- Elevation shadows ---- */
+    --elevation-xs: 0 1px 2px rgb(0 0 0 / 0.2);
+    --elevation-sm: 0 1px 3px rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+    --elevation-md:
+        0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --elevation-lg:
+        0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+
+    /* ---- Depth shadow (inverted for dark) ---- */
+    --depth-shadow: 0 -1px rgba(255, 255, 255, 0.08);
+
+    /* ---- Surface tint ---- */
+    --surface-tint: color-mix(in srgb, var(--input) 32%, transparent);
+    --surface-tint-hover: color-mix(in srgb, var(--input) 48%, transparent);
+    --surface-tint-active: color-mix(in srgb, var(--input) 64%, transparent);
+
+    /* ---- Bg-clip mode ---- */
+    --bg-clip-mode: border-box;
+}
+
+[data-theme="oblivion"] {
+    --accent: oklch(0.75 0.13 205.73);
+    --accent-foreground: oklch(0.94 0.03 215.14);
+
+    --background: oklch(0.15 0 0 / 0.85);
+    --foreground: oklch(0.96 0.01 217.54);
+    --card: oklch(0.19 0 286.02 / 0.8);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+
+    /* PRIMARY */
+    --primary: oklch(from var(--accent) l c h);
+    --primary-foreground: oklch(0.98 0.01 217.54);
+    --shadow-primary:
+        inset 0 0 0 1px #787d9313,
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd26),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25),
+        0 2px 4px rgba(0, 0, 0, 0.25);
+
+    /* PRIMARY */
+
+    /* SECONDARY */
+    --secondary: oklch(0.23 0.01 278.03);
+    --secondary-foreground: oklch(0.985 0 0);
+    --shadow-secondary:
+        inset 0 0 0 1px #31333c,
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd26),
+        inset 0 1px 0 rgba(255, 255, 255, 0.075),
+        inset 0 2px 4px rgba(255, 255, 255, 0.025),
+        0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.25);
+    /* SECONDARY */
+
+    /*DESTRUCTIVE*/
+    --destructive: oklch(0.37 0.13 27.24);
+    --destructive-foreground: oklch(1 0 0);
+    --shadow-destructive:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #761614, inset 0 0 0 1px #761614,
+        inset 0 1px 0 rgba(255, 255, 255, 0.075),
+        inset 0 2px 4px rgba(255, 255, 255, 0.025),
+        0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+    /*DESTRUCTIVE*/
+
+    /* WARNING */
+    --warning: oklch(0.69 0.2 34.5);
+    --warning-foreground: oklch(0.2 0.03 23.64);
+    --shadow-warning:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #fe603b, inset 0 0 0 1px #ff5f3b,
+        0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
+    /* WARNING */
+
+    /* SUCCESS */
+    --success: oklch(0.87 0.27 142.41);
+    --success-foreground: oklch(0.1 0 0);
+    --shadow-success:
+        0 0 0 var(--button-outline, 0px) var(--button-outline-color, #4575cd4d),
+        inset 0 -1px 0 #2d997c, inset 0 0 0 1px #60cc9a,
+        0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.075);
+    /* SUCCESS */
+
+    --muted: oklch(0.22 0 286.24);
+    --muted-foreground: oklch(0.64 0.01 182.92);
+    --border: oklch(0.569 0 0);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.439 0 0);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(0.269 0 0);
+    --sidebar-ring: oklch(0.439 0 0);
+    --highlight: oklch(0.2 0 286.22);
+    --highlight-foreground: oklch(0.99 0 0);
+
+    --radius-lg: 3px;
+    --radius-md: 1px;
+    --radius-sm: 1px;
+    --radius-xs: 0px;
+    --radius-2xs: 4px;
+    --radius-3xs: 2px;
+
+    --info: var(--color-blue-500);
+    --info-foreground: var(--color-blue-400);
+
+    /* ---- Elevation shadows ---- */
+    --elevation-xs: 0 1px 2px rgb(0 0 0 / 0.2);
+    --elevation-sm: 0 1px 3px rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+    --elevation-md:
+        0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --elevation-lg:
+        0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+
+    /* ---- Depth shadow (inverted for dark) ---- */
+    --depth-shadow: 0 -1px rgba(255, 255, 255, 0.08);
+
+    /* ---- Surface tint ---- */
+    --surface-tint: color-mix(in srgb, var(--input) 32%, transparent);
+    --surface-tint-hover: color-mix(in srgb, var(--input) 48%, transparent);
+    --surface-tint-active: color-mix(in srgb, var(--input) 64%, transparent);
+
+    /* ---- Backdrop ---- */
+    --backdrop: rgb(0 0 0 / 0.32);
+    --backdrop-accent: oklch(from var(--accent) 0.09 c h / 0.3);
+    --panel-blur: 4px;
+
+    /* ---- Bg-clip mode ---- */
+    --bg-clip-mode: border-box;
 }
 
 @theme inline {
@@ -248,6 +425,39 @@
     --radius-sm: var(--radius-sm);
     --radius-md: var(--radius-md);
     --radius-lg: var(--radius-lg);
+
+    /* ---- Elevation shadows (themeable) ---- */
+    --shadow-xs: var(--elevation-xs);
+    --shadow-sm: var(--elevation-sm);
+    --shadow-md: var(--elevation-md);
+    --shadow-lg: var(--elevation-lg);
+
+    /* ---- Depth shadow ---- */
+    --shadow-depth: var(--depth-shadow);
+
+    /* ---- Opacity ---- */
+    --opacity-disabled: var(--opacity-disabled);
+    --opacity-subtle: var(--opacity-subtle);
+
+    /* ---- Radii ---- */
+    --radius-xs: var(--radius-xs);
+    --radius-2xs: var(--radius-2xs);
+    --radius-3xs: var(--radius-3xs);
+
+    /* ---- Durations ---- */
+    --duration-fast: var(--duration-fast);
+    --duration-normal: var(--duration-normal);
+    --duration-slow: var(--duration-slow);
+    --duration-slower: var(--duration-slower);
+
+    /* ---- Surface ---- */
+    --color-surface-tint: var(--surface-tint);
+    --color-surface-tint-hover: var(--surface-tint-hover);
+    --color-surface-tint-active: var(--surface-tint-active);
+
+    /* ---- Backdrop ---- */
+    --color-backdrop: var(--backdrop);
+    --color-backdrop-accent: var(--backdrop-accent);
 }
 
 @layer base {
