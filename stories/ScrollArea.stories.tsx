@@ -1,13 +1,13 @@
-import { ScrollArea } from "../src/scroll-area";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ScrollArea } from '../src/scroll-area';
 
 const meta = {
-  title: "Example/ScrollArea",
+  title: 'Example/ScrollArea',
   component: ScrollArea,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 } satisfies Meta<typeof ScrollArea>;
 
 export default meta;

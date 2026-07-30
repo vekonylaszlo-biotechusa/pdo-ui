@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { CircularProgress } from "../src/circular-progress";
+import type { Meta, StoryObj } from '@storybook/react';
+import { CircularProgress } from '../src/circular-progress';
 
 const meta = {
-  title: "Example/CircularProgress",
+  title: 'Example/CircularProgress',
   component: CircularProgress,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 } satisfies Meta<typeof CircularProgress>;
 
 export default meta;
@@ -16,19 +16,19 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     value: 50,
-    size: "md",
+    size: 'md',
   },
   argTypes: {
     value: {
       control: {
         min: 0,
         max: 100,
-        type: "range",
+        type: 'range',
       },
     },
     size: {
-      control: "select",
-      options: ["sm", "md", "lg"],
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
     },
   },
 };
@@ -43,14 +43,14 @@ export const CustomSize: Story = {
       control: {
         min: 0,
         max: 100,
-        type: "range",
+        type: 'range',
       },
     },
     size: {
       control: {
         min: 14,
         max: 64,
-        type: "range",
+        type: 'range',
       },
     },
   },

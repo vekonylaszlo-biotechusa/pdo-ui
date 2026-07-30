@@ -1,12 +1,12 @@
-import { Checkbox as CheckboxPrimitive } from "@base-ui-components/react/checkbox";
+import { Checkbox as CheckboxPrimitive } from '@base-ui/react/checkbox';
 
-import { cn } from "./lib/utils";
+import { cn } from './lib/utils';
 
 function Checkbox({ className, ...props }: CheckboxPrimitive.Root.Props) {
   return (
     <CheckboxPrimitive.Root
       className={cn(
-        "relative inline-flex size-4.5 shrink-0 items-center justify-center rounded-xs border border-input bg-background  outline-none ring-ring transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-sm)-1px)] not-disabled:not-data-checked:not-aria-invalid:before:shadow-depth focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-disabled aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/48 bg-surface-tint dark:aria-invalid:ring-destructive/24 dark:not-disabled:not-data-checked:not-aria-invalid:before:shadow-depth [&:is(:disabled,[data-checked],[aria-invalid])]:shadow-none",
+        'relative inline-flex size-4.5 shrink-0 items-center justify-center rounded-xs border border-input bg-background  outline-none ring-ring transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-sm)-1px)] not-disabled:not-data-checked:not-aria-invalid:before:shadow-depth focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-disabled aria-invalid:border-destructive/36 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/48 bg-surface-tint dark:aria-invalid:ring-destructive/24 dark:not-disabled:not-data-checked:not-aria-invalid:before:shadow-depth [&:is(:disabled,[data-checked],[aria-invalid])]:shadow-none',
         className,
       )}
       data-slot="checkbox"

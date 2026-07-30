@@ -1,6 +1,6 @@
 export interface CircularProgressProps {
   value: number;
-  size?: "sm" | "md" | "lg" | number;
+  size?: 'sm' | 'md' | 'lg' | number;
 }
 
 const SIZE_MAP = {
@@ -11,25 +11,25 @@ const SIZE_MAP = {
 
 function getColor(value: number) {
   if (value === 0) {
-    return "var(--muted-foreground)";
+    return 'var(--muted-foreground)';
   }
   if (value > 0 && value <= 25) {
-    return "var(--chart-1)";
+    return 'var(--chart-1)';
   }
   if (value > 25 && value <= 50) {
-    return "var(--warning)";
+    return 'var(--warning)';
   } else if (value > 50 && value < 100) {
-    return "var(--info)";
+    return 'var(--info)';
   } else if (value > 99) {
-    return "var(--success)";
+    return 'var(--success)';
   }
 }
 export function CircularProgress({
   value,
-  size = "md",
+  size = 'md',
 }: CircularProgressProps) {
   const pct = Math.min(100, Math.max(0, value));
-  const sizePx = typeof size === "number" ? size : SIZE_MAP[size];
+  const sizePx = typeof size === 'number' ? size : SIZE_MAP[size];
 
   const r = 2;
   const dash = 11.3097335529;

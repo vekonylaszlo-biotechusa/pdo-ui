@@ -1,12 +1,12 @@
-import type * as React from "react";
+import type * as React from 'react';
 
-import { cn } from "./lib/utils";
+import { cn } from './lib/utils';
 
-function Frame({ className, ...props }: React.ComponentProps<"div">) {
+function Frame({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       className={cn(
-        "relative flex flex-col rounded-lg bg-muted p-1",
+        'relative flex flex-col rounded-lg bg-muted p-1',
         className,
       )}
       data-slot="frame"
@@ -15,11 +15,11 @@ function Frame({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function FramePanel({ className, ...props }: React.ComponentProps<"div">) {
+function FramePanel({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       className={cn(
-        "relative not-has-[table]:rounded-lg not-has-[table]:bg-card  not-has-[table]:p-5 not-has-[table]:shadow-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-depth has-[table]:before:hidden",
+        'relative not-has-[table]:rounded-lg not-has-[table]:bg-card  not-has-[table]:p-5 not-has-[table]:shadow-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-depth has-[table]:before:hidden',
         className,
       )}
       data-slot="frame-panel"
@@ -28,20 +28,20 @@ function FramePanel({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function FrameHeader({ className, ...props }: React.ComponentProps<"header">) {
+function FrameHeader({ className, ...props }: React.ComponentProps<'header'>) {
   return (
     <header
-      className={cn("flex flex-col px-5 py-4", className)}
+      className={cn('flex flex-col px-5 py-4', className)}
       data-slot="frame-panel-header"
       {...props}
     />
   );
 }
 
-function FrameTitle({ className, ...props }: React.ComponentProps<"div">) {
+function FrameTitle({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
-      className={cn("font-semibold text-sm", className)}
+      className={cn('font-semibold text-sm', className)}
       data-slot="frame-panel-title"
       {...props}
     />
@@ -51,20 +51,20 @@ function FrameTitle({ className, ...props }: React.ComponentProps<"div">) {
 function FrameDescription({
   className,
   ...props
-}: React.ComponentProps<"div">) {
+}: React.ComponentProps<'div'>) {
   return (
     <div
-      className={cn("text-muted-foreground text-sm", className)}
+      className={cn('text-muted-foreground text-sm', className)}
       data-slot="frame-panel-description"
       {...props}
     />
   );
 }
 
-function FrameFooter({ className, ...props }: React.ComponentProps<"footer">) {
+function FrameFooter({ className, ...props }: React.ComponentProps<'footer'>) {
   return (
     <footer
-      className={cn("flex flex-col gap-1 px-5 py-4", className)}
+      className={cn('flex flex-col gap-1 px-5 py-4', className)}
       data-slot="frame-panel-footer"
       {...props}
     />
@@ -73,9 +73,9 @@ function FrameFooter({ className, ...props }: React.ComponentProps<"footer">) {
 
 export {
   Frame,
-  FramePanel,
-  FrameHeader,
-  FrameTitle,
   FrameDescription,
   FrameFooter,
+  FrameHeader,
+  FramePanel,
+  FrameTitle,
 };

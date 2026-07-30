@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 import {
   PauseIcon,
   PlayIcon,
   SkipBackIcon,
   SkipForwardIcon,
   TrashIcon,
-} from "lucide-react";
-import { useState } from "react";
-import { Button } from "../src/button";
+} from 'lucide-react';
+import { useState } from 'react';
+import { Button } from '../src/button';
 import {
   Dialog,
   DialogClose,
@@ -16,7 +16,7 @@ import {
   DialogHeader,
   DialogPopup,
   DialogTitle,
-} from "../src/dialog";
+} from '../src/dialog';
 import {
   Menu,
   MenuCheckboxItem,
@@ -32,15 +32,15 @@ import {
   MenuSubPopup,
   MenuSubTrigger,
   MenuTrigger,
-} from "../src/menu";
+} from '../src/menu';
 
 const meta = {
-  title: "Example/Menu",
+  title: 'Example/Menu',
   component: Menu,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 } satisfies Meta<typeof Menu>;
 
 export default meta;

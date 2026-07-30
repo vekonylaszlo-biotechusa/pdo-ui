@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Tabs, TabsList, TabsPanel, TabsTab } from "../src/tabs";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Tabs, TabsList, TabsPanel, TabsTab } from '../src/tabs';
 
 const meta = {
-  title: "Example/Tabs",
+  title: 'Example/Tabs',
   component: Tabs,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 } satisfies Meta<typeof Tabs>;
 
 export default meta;

@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Checkbox } from "../src/checkbox";
-import { Label } from "../src/label";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Checkbox } from '../src/checkbox';
+import { Label } from '../src/label';
 
 const meta = {
-  title: "Example/Checkbox",
+  title: 'Example/Checkbox',
   component: Checkbox,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;

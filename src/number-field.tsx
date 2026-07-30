@@ -1,9 +1,8 @@
-import { NumberField as NumberFieldPrimitive } from "@base-ui-components/react/number-field";
-import { MinusIcon, PlusIcon } from "lucide-react";
-import * as React from "react";
-
-import { cn } from "./lib/utils";
-import { Label } from "@/src/label";
+import { NumberField as NumberFieldPrimitive } from '@base-ui/react/number-field';
+import { MinusIcon, PlusIcon } from 'lucide-react';
+import * as React from 'react';
+import { Label } from '@/src/label';
+import { cn } from './lib/utils';
 
 const NumberFieldContext = React.createContext<{
   fieldId: string;
@@ -12,10 +11,10 @@ const NumberFieldContext = React.createContext<{
 function NumberField({
   id,
   className,
-  size = "default",
+  size = 'default',
   ...props
 }: NumberFieldPrimitive.Root.Props & {
-  size?: "sm" | "default" | "lg";
+  size?: 'sm' | 'default' | 'lg';
 }) {
   const generatedId = React.useId();
   const fieldId = id ?? generatedId;
@@ -23,7 +22,7 @@ function NumberField({
   return (
     <NumberFieldContext.Provider value={{ fieldId }}>
       <NumberFieldPrimitive.Root
-        className={cn("flex w-full flex-col items-start gap-2", className)}
+        className={cn('flex w-full flex-col items-start gap-2', className)}
         data-size={size}
         data-slot="number-field"
         id={fieldId}
@@ -56,7 +55,7 @@ function NumberFieldDecrement({
   return (
     <NumberFieldPrimitive.Decrement
       className={cn(
-        "relative flex shrink-0 cursor-pointer items-center justify-center rounded-s-[calc(var(--radius-md)-1px)] in-data-[size=sm]:px-[calc(--spacing(2.5)-1px)] px-[calc(--spacing(3)-1px)] transition-colors pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:bg-highlight hover:text-highlight-foreground",
+        'relative flex shrink-0 cursor-pointer items-center justify-center rounded-s-[calc(var(--radius-md)-1px)] in-data-[size=sm]:px-[calc(--spacing(2.5)-1px)] px-[calc(--spacing(3)-1px)] transition-colors pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:bg-highlight hover:text-highlight-foreground',
         className,
       )}
       data-slot="number-field-decrement"
@@ -74,7 +73,7 @@ function NumberFieldIncrement({
   return (
     <NumberFieldPrimitive.Increment
       className={cn(
-        "relative flex shrink-0 cursor-pointer items-center justify-center rounded-e-[calc(var(--radius-md)-1px)] in-data-[size=sm]:px-[calc(--spacing(2.5)-1px)] px-[calc(--spacing(3)-1px)] transition-colors pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:bg-highlight hover:text-highlight-foreground",
+        'relative flex shrink-0 cursor-pointer items-center justify-center rounded-e-[calc(var(--radius-md)-1px)] in-data-[size=sm]:px-[calc(--spacing(2.5)-1px)] px-[calc(--spacing(3)-1px)] transition-colors pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 hover:bg-highlight hover:text-highlight-foreground',
         className,
       )}
       data-slot="number-field-increment"
@@ -92,7 +91,7 @@ function NumberFieldInput({
   return (
     <NumberFieldPrimitive.Input
       className={cn(
-        "w-full min-w-0 flex-1 bg-transparent in-data-[size=sm]:px-[calc(--spacing(2.5)-1px)] px-[calc(--spacing(3)-1px)] in-data-[size=lg]:py-[calc(--spacing(2)-1px)] in-data-[size=sm]:py-[calc(--spacing(1)-1px)] py-[calc(--spacing(1.5)-1px)] text-center tabular-nums outline-none",
+        'w-full min-w-0 flex-1 bg-transparent in-data-[size=sm]:px-[calc(--spacing(2.5)-1px)] px-[calc(--spacing(3)-1px)] in-data-[size=lg]:py-[calc(--spacing(2)-1px)] in-data-[size=sm]:py-[calc(--spacing(1)-1px)] py-[calc(--spacing(1.5)-1px)] text-center tabular-nums outline-none',
         className,
       )}
       data-slot="number-field-input"
@@ -112,13 +111,13 @@ function NumberFieldScrubArea({
 
   if (!context) {
     throw new Error(
-      "NumberFieldScrubArea must be used within a NumberField component for accessibility.",
+      'NumberFieldScrubArea must be used within a NumberField component for accessibility.',
     );
   }
 
   return (
     <NumberFieldPrimitive.ScrubArea
-      className={cn("flex cursor-ew-resize", className)}
+      className={cn('flex cursor-ew-resize', className)}
       data-slot="number-field-scrub-area"
       {...props}
     >
@@ -132,7 +131,7 @@ function NumberFieldScrubArea({
   );
 }
 
-function CursorGrowIcon(props: React.ComponentProps<"svg">) {
+function CursorGrowIcon(props: React.ComponentProps<'svg'>) {
   return (
     <svg
       fill="black"
@@ -150,9 +149,9 @@ function CursorGrowIcon(props: React.ComponentProps<"svg">) {
 
 export {
   NumberField,
-  NumberFieldScrubArea,
   NumberFieldDecrement,
-  NumberFieldIncrement,
   NumberFieldGroup,
+  NumberFieldIncrement,
   NumberFieldInput,
+  NumberFieldScrubArea,
 };
