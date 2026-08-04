@@ -90,10 +90,10 @@ export const ErrorWithAction: Story = {
       <AlertTitle>Heads up!</AlertTitle>
       <AlertDescription>The action was unsuccessful!</AlertDescription>
       <AlertAction>
-        <Button size="xs" variant="ghost">
+        <Button size="sm" variant="ghost">
           Dismiss
         </Button>
-        <Button size="xs">Retry</Button>
+        <Button size="sm">Retry</Button>
       </AlertAction>
     </Alert>
   ),

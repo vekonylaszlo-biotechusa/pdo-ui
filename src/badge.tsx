@@ -23,7 +23,7 @@ const badgeVariants = cva(
         destructive:
           'bg-destructive text-white [button,a&]:hover:bg-destructive/90',
         error: 'bg-destructive text-destructive-foreground',
-        info: 'bg-info/8 text-info-foreground dark:bg-info/16',
+        info: 'bg-info text-info-foreground',
         outline:
           'border-border bg-transparent bg-surface-tint [button,a&]:hover:bg-highlight/50 [button,a&]:hover:bg-surface-tint-hover',
         secondary:

@@ -28,26 +28,6 @@ export const Touch: Story = {
   },
 };
 
-export const ExtraLarge: Story = {
-  args: {
-    size: 'xl',
-    children: 'Extra Large',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'lg',
-    children: 'Large',
-  },
-};
-
-export const ExtraSmall: Story = {
-  args: {
-    size: 'xs',
-    children: 'Extra Small',
-  },
-};
 
 export const Small: Story = {
   args: {

@@ -6,7 +6,7 @@ import type * as React from 'react';
 import { cn } from './lib/utils';
 
 const buttonVariants = cva(
-  "text-[14px] relative rounded-md inline-flex active:scale-[0.975] will-change-transform shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium text-sm outline-none pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-disabled [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-all duration-fast ease-out",
+  " text-[14px] relative rounded-md inline-flex active:scale-[0.975] will-change-transform shrink-0 cursor-pointer items-center justify-center  whitespace-nowrap rounded-md font-medium text-sm outline-none pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-disabled [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-all duration-fast ease-out",
   {
     defaultVariants: {
       size: 'default',
@@ -16,15 +16,7 @@ const buttonVariants = cva(
       size: {
         default: 'py-2 px-4',
         icon: 'size-8',
-        'icon-lg': 'size-9',
-        'icon-sm': 'size-7',
-        'icon-xl': "size-10 [&_svg:not([class*='size-'])]:size-4.5",
-        'icon-xs':
-          'size-6 rounded-md before:rounded-[calc(var(--radius-md)-1px)]',
-        lg: 'min-h-9 px-[calc(--spacing(3.5)-1px)] py-[calc(--spacing(2)-1px)]',
-        sm: 'min-h-7 gap-1.5 rounded-2xs px-[calc(--spacing(2.5)-1px)] py-[calc(--spacing(1)-1px)]',
-        xl: "min-h-10 px-[calc(--spacing(4)-1px)] py-[calc(--spacing(2)-1px)] text-base [&_svg:not([class*='size-'])]:size-4.5",
-        xs: "min-h-6 gap-1 rounded-3xs px-[calc(--spacing(2)-1px)] py-[calc(--spacing(1)-1px)] text-xs before:rounded-[calc(var(--radius-md)-1px)] [&_svg:not([class*='size-'])]:size-3",
+        sm: 'min-h-7 gap-1.5 rounded-sm px-[calc(--spacing(2.5)-1px)] py-[calc(--spacing(1)-1px)]',
         touch: 'py-4 px-6',
       },
       variant: {
@@ -39,7 +31,7 @@ const buttonVariants = cva(
         'destructive-outline':
           'border border-destructive bg-transparent hover:bg-destructive hover:text-destructive-foreground text-destructive ',
         ghost:
-          'border-transparent hover:bg-highlight hover:text-highlight-foreground data-pressed:bg-highlight',
+          'border-transparent hover:bg-primary hover:text-primary-foreground',
         link: 'border-transparent underline-offset-4 hover:underline',
         outline:
           'border-border bg-background shadow-xs not-disabled:not-active:not-data-pressed:before:shadow-depth bg-surface-tint dark:not-in-data-[slot=group]: dark:not-disabled:not-active:not-data-pressed:before:shadow-depth [&:is(:disabled,:active,[data-pressed])]:shadow-none [&:is(:hover,[data-pressed])]:bg-highlight/50 dark:[&:is(:hover,[data-pressed])]:bg-surface-tint-active',
