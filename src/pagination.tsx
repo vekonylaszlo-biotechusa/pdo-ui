@@ -56,7 +56,7 @@ function PaginationLink({
       : cn(
           buttonVariants({
             size,
-            variant: isActive ? 'outline' : 'ghost',
+            variant: isActive ? 'secondary' : 'ghost',
           }),
           className,
         ),

@@ -35,7 +35,7 @@ export const Example: Story = {
       <EmptyContent>
         <div className="flex gap-2">
           <Button size="sm">Create meeting</Button>
-          <Button size="sm" variant="outline">
+          <Button size="sm" variant="secondary">
             <BookIcon className="opacity-72" />
             View docs
           </Button>

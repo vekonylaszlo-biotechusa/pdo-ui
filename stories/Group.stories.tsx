@@ -29,19 +29,19 @@ export const Default: Story = {
     orientation: 'horizontal',
     children: (
       <>
-        <Button variant="outline">
+        <Button size="sm" variant="secondary">
           <FilesIcon />
           Files
         </Button>
         <GroupSeparator />
-        <Button variant="outline">
+        <Button size="sm" variant="secondary">
           <FilmIcon />
           Media
         </Button>
         <GroupSeparator />
         <Menu>
           <MenuTrigger
-            render={<Button aria-label="Menu" size="icon" variant="outline" />}
+            render={<Button aria-label="Menu" size="icon" variant="secondary" />}
           >
             <EllipsisIcon className="size-4" />
           </MenuTrigger>

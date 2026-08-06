@@ -25,7 +25,7 @@ const badgeVariants = cva(
         error: 'bg-destructive text-destructive-foreground',
         info: 'bg-info text-info-foreground',
         outline:
-          'border-border bg-transparent bg-surface-tint [button,a&]:hover:bg-highlight/50 [button,a&]:hover:bg-surface-tint-hover',
+          'border-border bg-transparent [button,a&]:hover:bg-highlight/50 [button,a&]:hover:bg-surface-tint-hover',
         secondary:
           'bg-secondary text-secondary-foreground [button,a&]:hover:bg-secondary/90',
         success: 'bg-success text-success-foreground',

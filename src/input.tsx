@@ -22,7 +22,7 @@ function Input({
       className={
         cn(
           !unstyled &&
-            'relative inline-flex w-full rounded-md border border-input bg-background text-base/5 shadow-sm ring-ring/24 transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)] not-has-disabled:not-has-focus-visible:not-has-aria-invalid:before:shadow-depth has-focus-visible:has-aria-invalid:border-destructive/64 has-focus-visible:has-aria-invalid:ring-destructive/16 has-aria-invalid:border-destructive/36 has-focus-visible:border-ring has-disabled:opacity-disabled has-[:disabled,:focus-visible,[aria-invalid]]:shadow-none has-focus-visible:ring-[3px] sm:text-sm dark:not-in-data-[slot=group]: dark:has-aria-invalid:ring-destructive/24 dark:not-has-disabled:not-has-focus-visible:not-has-aria-invalid:before:shadow-depth',
+            'relative inline-flex w-full rounded-md border border-input-border  bg-background text-base/5 shadow-sm ring-ring/24 transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)] not-has-disabled:not-has-focus-visible:not-has-aria-invalid:before:shadow-depth has-focus-visible:has-aria-invalid:border-destructive/64 has-focus-visible:has-aria-invalid:ring-destructive/16 has-aria-invalid:border-destructive/36 has-focus-visible:border-ring has-disabled:opacity-disabled has-[:disabled,:focus-visible,[aria-invalid]]:shadow-none has-focus-visible:ring-[3px] sm:text-sm dark:not-in-data-[slot=group]: dark:has-aria-invalid:ring-destructive/24 dark:not-has-disabled:not-has-focus-visible:not-has-aria-invalid:before:shadow-depth',
           className,
         ) || undefined
       }

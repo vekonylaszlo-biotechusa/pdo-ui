@@ -49,7 +49,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <Menu>
-      <MenuTrigger render={<Button variant="outline" />}>Open menu</MenuTrigger>
+      <MenuTrigger render={<Button variant="secondary" />}>Open menu</MenuTrigger>
       <MenuPopup>
         <MenuGroup>
           <MenuGroupLabel>Playback</MenuGroupLabel>
@@ -124,7 +124,7 @@ export const Default: Story = {
 export const WithCheckboxes: Story = {
   render: () => (
     <Menu>
-      <MenuTrigger render={<Button variant="outline" />}>Open menu</MenuTrigger>
+      <MenuTrigger render={<Button />}>Open menu</MenuTrigger>
       <MenuPopup>
         <MenuCheckboxItem defaultChecked>Auto save</MenuCheckboxItem>
         <MenuCheckboxItem>Notifications</MenuCheckboxItem>
@@ -138,7 +138,7 @@ export function WithDialogComponent() {
   return (
     <>
       <Menu>
-        <MenuTrigger render={<Button variant="outline" />}>
+        <MenuTrigger render={<Button variant="secondary" />}>
           Open menu
         </MenuTrigger>
         <MenuPopup align="start">
@@ -167,7 +167,7 @@ export const WithDialog: Story = {
 export const Touch: Story = {
   render: () => (
     <Menu>
-      <MenuTrigger render={<Button variant="outline" />}>Open menu</MenuTrigger>
+      <MenuTrigger render={<Button variant="secondary" />}>Open menu</MenuTrigger>
       <MenuPopup>
         <MenuGroup>
           <MenuGroupLabel>Playback</MenuGroupLabel>

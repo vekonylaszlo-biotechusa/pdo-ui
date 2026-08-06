@@ -39,7 +39,7 @@ export const Default: Story = {
         <TableRow>
           <TableCell className="font-medium">Website Redesign</TableCell>
           <TableCell>
-            <Badge variant="outline">
+            <Badge variant="secondary">
               <span
                 aria-hidden="true"
                 className="size-1.5 rounded-full bg-emerald-500"
@@ -53,7 +53,7 @@ export const Default: Story = {
         <TableRow>
           <TableCell className="font-medium">Mobile App</TableCell>
           <TableCell>
-            <Badge variant="outline">
+            <Badge variant="secondary">
               <span
                 aria-hidden="true"
                 className="size-1.5 rounded-full bg-muted-foreground/64"
@@ -67,7 +67,7 @@ export const Default: Story = {
         <TableRow>
           <TableCell className="font-medium">API Integration</TableCell>
           <TableCell>
-            <Badge variant="outline">
+            <Badge variant="secondary">
               <span
                 aria-hidden="true"
                 className="size-1.5 rounded-full bg-amber-500"
@@ -81,7 +81,7 @@ export const Default: Story = {
         <TableRow>
           <TableCell className="font-medium">Database Migration</TableCell>
           <TableCell>
-            <Badge variant="outline">
+            <Badge variant="secondary">
               <span
                 aria-hidden="true"
                 className="size-1.5 rounded-full bg-emerald-500"
@@ -95,7 +95,7 @@ export const Default: Story = {
         <TableRow>
           <TableCell className="font-medium">User Dashboard</TableCell>
           <TableCell>
-            <Badge variant="outline">
+            <Badge variant="secondary">
               <span
                 aria-hidden="true"
                 className="size-1.5 rounded-full bg-emerald-500"
@@ -109,7 +109,7 @@ export const Default: Story = {
         <TableRow>
           <TableCell className="font-medium">Security Audit</TableCell>
           <TableCell>
-            <Badge variant="outline">
+            <Badge variant="secondary">
               <span
                 aria-hidden="true"
                 className="size-1.5 rounded-full bg-red-500"

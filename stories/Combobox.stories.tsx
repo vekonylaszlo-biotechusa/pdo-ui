@@ -135,7 +135,7 @@ export const InputInsidePopup: Story = {
         render={
           <Button
             className="w-full justify-between font-normal"
-            variant="outline"
+            variant="secondary"
           />
         }
       >

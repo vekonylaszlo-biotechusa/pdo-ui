@@ -33,7 +33,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <Popover>
-      <PopoverTrigger render={<Button variant="outline" />}>
+      <PopoverTrigger render={<Button variant="secondary" />}>
         Open Popover
       </PopoverTrigger>
       <PopoverPopup className="w-80">
@@ -61,7 +61,7 @@ export const Default: Story = {
 export const WithClose: Story = {
   render: () => (
     <Popover>
-      <PopoverTrigger render={<Button variant="outline" />}>
+      <PopoverTrigger render={<Button variant="secondary" />}>
         Open Popover
       </PopoverTrigger>
       <PopoverPopup className="w-80">
@@ -75,7 +75,7 @@ export const WithClose: Story = {
             You are all caught up. Good job!
           </PopoverDescription>
         </div>
-        <PopoverClose render={<Button variant="outline" />}>Close</PopoverClose>
+        <PopoverClose render={<Button variant="secondary" />}>Close</PopoverClose>
       </PopoverPopup>
     </Popover>
   ),
@@ -95,7 +95,7 @@ export const TooltipStyle: Story = {
             render={
               <Button
                 aria-label="Password requirements"
-                size="icon-xs"
+                size="icon"
                 variant="ghost"
               />
             }

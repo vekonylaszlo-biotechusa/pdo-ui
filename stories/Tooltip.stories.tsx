@@ -24,7 +24,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <Tooltip>
-      <TooltipTrigger render={<Button variant="outline" />}>
+      <TooltipTrigger render={<Button variant="secondary" />}>
         Hover me
       </TooltipTrigger>
       <TooltipPopup>Helpful hint</TooltipPopup>

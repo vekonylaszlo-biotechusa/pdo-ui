@@ -19,7 +19,7 @@ const toggleVariants = cva(
       variant: {
         default: 'border-transparent',
         outline:
-          'border-border shadow-xs bg-surface-tint [&:is(:disabled,:active,[data-pressed])]:shadow-none',
+          'border-border shadow-xs [&:is(:disabled,:active,[data-pressed])]:shadow-none',
       },
     },
   },

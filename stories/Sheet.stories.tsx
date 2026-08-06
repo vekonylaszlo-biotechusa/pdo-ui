@@ -29,7 +29,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <Sheet>
-      <SheetTrigger render={<Button variant="outline" />}>
+      <SheetTrigger render={<Button variant="secondary" />}>
         Open Sheet
       </SheetTrigger>
       <SheetPopup>
@@ -64,7 +64,7 @@ export const Default: Story = {
 export const WithInset: Story = {
   render: () => (
     <Sheet>
-      <SheetTrigger render={<Button variant="outline" />}>
+      <SheetTrigger render={<Button variant="secondary" />}>
         Open Sheet
       </SheetTrigger>
       <SheetPopup inset>

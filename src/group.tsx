@@ -52,7 +52,7 @@ function GroupText({
 }: useRender.ComponentProps<'div'>) {
   const defaultProps = {
     className: cn(
-      "relative inline-flex items-center whitespace-nowrap rounded-lg border border-border bg-muted  px-[calc(--spacing(3)-1px)] font-medium text-sm shadow-xs outline-none transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-depth bg-surface-tint dark:before:shadow-depth [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0",
+      "relative inline-flex items-center whitespace-nowrap rounded-lg border border-border bg-muted  px-[calc(--spacing(3)-1px)] font-medium text-sm shadow-xs outline-none transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-depth dark:before:shadow-depth [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0",
       className,
     ),
     'data-slot': 'group-text',

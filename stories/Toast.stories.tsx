@@ -54,7 +54,7 @@ export const Action: Story = {
             type: 'success',
           });
         }}
-        variant="outline"
+        variant="secondary"
       >
         Perform Action
       </Button>
@@ -94,7 +94,7 @@ export const WithPromise: Story = {
             },
           );
         }}
-        variant="outline"
+        variant="secondary"
       >
         Run Promise
       </Button>

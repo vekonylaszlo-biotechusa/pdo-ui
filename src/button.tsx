@@ -33,8 +33,6 @@ const buttonVariants = cva(
         ghost:
           'border-transparent hover:bg-secondary hover:text-secondary-foreground',
         link: 'border-transparent underline-offset-4 hover:underline',
-        outline:
-          'border-border bg-background shadow-xs not-disabled:not-active:not-data-pressed:before:shadow-depth bg-surface-tint dark:not-in-data-[slot=group]: dark:not-disabled:not-active:not-data-pressed:before:shadow-depth [&:is(:disabled,:active,[data-pressed])]:shadow-none [&:is(:hover,[data-pressed])]:bg-highlight/50 dark:[&:is(:hover,[data-pressed])]:bg-surface-tint-active',
         secondary:
           'bg-secondary text-secondary-foreground shadow-secondary hover:bg-secondary/90',
         test: 'text-primary-foreground bg-gradient-to-b from-primary-from to-primary-to hover:from-[#228e22] hover:to-[#00761e] active:shadow-primary-active shadow-primary  border-none transition-all duration-fast',

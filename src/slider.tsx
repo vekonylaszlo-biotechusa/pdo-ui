@@ -50,7 +50,7 @@ function Slider({
           />
           {Array.from({ length: _values.length }, (_, index) => (
             <SliderPrimitive.Thumb
-              className="block size-4 shrink-0 select-none rounded-full border border-input bg-white  shadow-xs outline-none transition-shadow before:absolute before:inset-0 before:rounded-full before:shadow-depth focus-visible:ring-[3px] focus-visible:ring-ring/24 has-focus-visible:ring-[3px] has-focus-visible:ring-ring/24 data-dragging:ring-[3px] data-dragging:ring-ring/24 dark:border-background dark:data-dragging:ring-ring/48 dark:focus-visible:ring-ring/48 [&:is(:focus-visible,[data-dragging])]:shadow-none"
+              className="block size-4 shrink-0 select-none rounded-full border border-input-border bg-white  shadow-xs outline-none transition-shadow before:absolute before:inset-0 before:rounded-full before:shadow-depth focus-visible:ring-[3px] focus-visible:ring-ring/24 has-focus-visible:ring-[3px] has-focus-visible:ring-ring/24 data-dragging:ring-[3px] data-dragging:ring-ring/24 dark:border-background dark:data-dragging:ring-ring/48 dark:focus-visible:ring-ring/48 [&:is(:focus-visible,[data-dragging])]:shadow-none"
               data-slot="slider-thumb"
               key={String(index)}
             />

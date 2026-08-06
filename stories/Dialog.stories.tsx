@@ -41,7 +41,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <Dialog>
-      <DialogTrigger render={<Button variant="outline" />}>
+      <DialogTrigger render={<Button variant="secondary" />}>
         Open Dialog
       </DialogTrigger>
       <DialogPopup className="sm:max-w-sm">
@@ -73,7 +73,7 @@ export const FromMenu: Story = {
 export const Nested: Story = {
   render: () => (
     <Dialog>
-      <DialogTrigger render={<Button variant="outline" />}>
+      <DialogTrigger render={<Button variant="secondary" />}>
         Open parent
       </DialogTrigger>
       <DialogPopup showCloseButton={false}>
@@ -95,7 +95,7 @@ export const Nested: Story = {
         </div>
         <DialogFooter>
           <Dialog>
-            <DialogTrigger render={<Button variant="outline" />}>
+            <DialogTrigger render={<Button variant="secondary" />}>
               Edit details
             </DialogTrigger>
             <DialogPopup showCloseButton={false}>
@@ -140,7 +140,7 @@ function DialogCloseConfirmationDemo() {
       }}
       open={dialogOpen}
     >
-      <DialogTrigger render={<Button variant="outline" />}>
+      <DialogTrigger render={<Button variant="secondary" />}>
         Compose
       </DialogTrigger>
       <DialogPopup showCloseButton={false}>

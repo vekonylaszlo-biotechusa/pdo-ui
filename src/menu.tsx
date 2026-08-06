@@ -37,7 +37,7 @@ function MenuPopup({
       >
         <span
           className={cn(
-            'relative flex origin-(--transform-origin) rounded-md border bg-popover  shadow-lg transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)] before:shadow-depth has-data-starting-style:scale-98 has-data-starting-style:opacity-0',
+            'relative flex origin-(--transform-origin) rounded-md border bg-popover shadow-lg transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)] before:shadow-depth has-data-starting-style:scale-98 has-data-starting-style:opacity-0',
             className,
           )}
         >
@@ -70,7 +70,7 @@ function MenuItem({
   return (
     <MenuPrimitive.Item
       className={cn(
-        "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1 text-base outline-none data-disabled:pointer-events-none data-highlighted:bg-highlight data-highlighted:text-highlight-foreground data-inset:ps-8 data-[variant=destructive]:text-destructive-foreground data-disabled:opacity-disabled sm:text-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 data-[size=touch]:py-(--spacing-touch)",
+        "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1 text-base outline-none data-disabled:pointer-events-none data-highlighted:bg-highlight data-highlighted:text-highlight-foreground data-inset:ps-8  data-disabled:opacity-disabled sm:text-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 data-[size=touch]:py-(--spacing-touch)",
         className, {
           "data-highlighted:bg-destructive data-highlighted:text-destructive-foreground": variant === 'destructive'
         }
