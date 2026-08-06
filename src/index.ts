@@ -278,3 +278,4 @@ export {
 export { TouchButton } from "./touch-button";
 export { TouchCard, TouchCardContent, TouchCardDescription, TouchCardTitle } from "./touch-card";
 export { StandbySwitch } from "./standby-switch"
+export { BasePlate } from "./base-plate"
