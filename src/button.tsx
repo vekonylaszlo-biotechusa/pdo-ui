@@ -6,7 +6,7 @@ import type * as React from 'react';
 import { cn } from './lib/utils';
 
 const buttonVariants = cva(
-  " text-[14px] relative rounded-md inline-flex active:scale-[0.975] will-change-transform shrink-0 cursor-pointer items-center justify-center  whitespace-nowrap rounded-md font-medium text-sm outline-none pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-disabled [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-all duration-fast ease-out",
+  " text-[14px] relative rounded-md inline-flex active:scale-[0.975] will-change-transform shrink-0 cursor-pointer items-center justify-center  whitespace-nowrap rounded-md font-semibold text-sm outline-none pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-disabled [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-all duration-fast ease-out",
   {
     defaultVariants: {
       size: 'default',
@@ -31,7 +31,7 @@ const buttonVariants = cva(
         'destructive-outline':
           'border border-destructive bg-transparent hover:bg-destructive hover:text-destructive-foreground text-destructive ',
         ghost:
-          'border-transparent hover:bg-primary hover:text-primary-foreground',
+          'border-transparent hover:bg-secondary hover:text-secondary-foreground',
         link: 'border-transparent underline-offset-4 hover:underline',
         outline:
           'border-border bg-background shadow-xs not-disabled:not-active:not-data-pressed:before:shadow-depth bg-surface-tint dark:not-in-data-[slot=group]: dark:not-disabled:not-active:not-data-pressed:before:shadow-depth [&:is(:disabled,:active,[data-pressed])]:shadow-none [&:is(:hover,[data-pressed])]:bg-highlight/50 dark:[&:is(:hover,[data-pressed])]:bg-surface-tint-active',

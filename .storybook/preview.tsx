@@ -57,8 +57,8 @@ const preview: Preview = {
             title: 'Oblivion',
           },
           {
-            value: 'linear',
-            title: 'Linear',
+            value: 'rsi',
+            title: 'RSI',
           },
         ],
       },
