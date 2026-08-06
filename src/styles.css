@@ -212,7 +212,7 @@
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.145 0 0);
     --popover-foreground: oklch(0.985 0 0);
-    --titlebar: oklch(1 0 0);
+    --titlebar: oklch(0.14 0 286.11);
     --titlebar-foreground: oklch(from var(--accent) 0.25 c h);
     /* PRIMARY */
     --primary: oklch(from var(--accent) l calc(c + 0.02) h);
@@ -420,7 +420,7 @@
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.33 0.06 239.9);
     --popover-foreground: oklch(0.985 0 0);
-    --titlebar: oklch(0.15 0 0);
+    --titlebar: oklch(0.28 0.05 239.01);
     --titlebar-foreground: oklch(0.96 0.01 217.54);
 
     /* PRIMARY */
