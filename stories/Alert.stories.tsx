@@ -23,20 +23,6 @@ export const Default: Story = {
     <Alert {...args}>
       <InfoIcon />
       <AlertTitle>Alert title</AlertTitle>
-      <AlertDescription>Alert description</AlertDescription>
-    </Alert>
-  ),
-};
-
-export const Info: Story = {
-  args: {
-    variant: 'info',
-  },
-  render: (args) => (
-    <Alert {...args}>
-      <InfoIcon />
-      <AlertTitle>Alert title</AlertTitle>
-      <AlertDescription>Alert description</AlertDescription>
     </Alert>
   ),
 };
@@ -49,7 +35,6 @@ export const Success: Story = {
     <Alert {...args}>
       <CheckIcon />
       <AlertTitle>Alert title</AlertTitle>
-      <AlertDescription>Alert description</AlertDescription>
     </Alert>
   ),
 };
@@ -62,7 +47,18 @@ export const Warning: Story = {
     <Alert {...args}>
       <AlertCircleIcon />
       <AlertTitle>Alert title</AlertTitle>
-      <AlertDescription>Alert description</AlertDescription>
+    </Alert>
+  ),
+};
+
+export const Info: Story = {
+  args: {
+    variant: 'info',
+  },
+  render: (args) => (
+    <Alert {...args}>
+      <AlertCircleIcon />
+      <AlertTitle>Alert title</AlertTitle>
     </Alert>
   ),
 };
@@ -75,7 +71,6 @@ export const Error: Story = {
     <Alert {...args}>
       <AlertCircleIcon />
       <AlertTitle>Alert title</AlertTitle>
-      <AlertDescription>Alert description</AlertDescription>
     </Alert>
   ),
 };
@@ -88,7 +83,6 @@ export const ErrorWithAction: Story = {
     <Alert {...args}>
       <InfoIcon />
       <AlertTitle>Heads up!</AlertTitle>
-      <AlertDescription>The action was unsuccessful!</AlertDescription>
       <AlertAction>
         <Button size="sm" variant="ghost">
           Dismiss

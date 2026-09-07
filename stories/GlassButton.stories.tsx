@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { Zap } from "lucide-react";
 import { fn } from "storybook/test";
-import { Button } from "../src/button";
+import { GlassButton } from "../src/glass-button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Example/Button",
-  component: Button,
+  title: "Example/GlassButton",
+  component: GlassButton,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
@@ -16,17 +17,12 @@ const meta = {
 
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof GlassButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Touch: Story = {
-  args: {
-    size: "touch",
-    children: "Touch",
-  },
-};
+
 
 export const Small: Story = {
   args: {
@@ -35,45 +31,31 @@ export const Small: Story = {
   },
 };
 
-export const Link: Story = {
+export const Red: Story = {
   args: {
-    variant: "link",
-    children: "Link",
+    variant: "red",
+    children: "Red",
   },
 };
 
-export const Ghost: Story = {
+export const Cream: Story = {
   args: {
-    variant: "ghost",
-    children: "Ghost",
+    variant: "cream",
+    children: "Cream",
   },
 };
 
-export const DestructiveOutline: Story = {
+export const Blue: Story = {
   args: {
-    variant: "destructive-outline",
-    children: "Destructive outline",
+    variant: "blue",
+    children: "Blue",
   },
 };
 
-export const Destructive: Story = {
+export const Green: Story = {
   args: {
-    variant: "destructive",
-    children: "Destructive",
-  },
-};
-
-export const Warning: Story = {
-  args: {
-    variant: "warning",
-    children: "Warning",
-  },
-};
-
-export const Success: Story = {
-  args: {
-    variant: "success",
-    children: "Success",
+    variant: "green",
+    children: "Green",
   },
 };
 
@@ -91,9 +73,11 @@ export const Secondary: Story = {
   },
 };
 
-export const Test: Story = {
+
+export const Icon: Story = {
   args: {
-    variant: "test",
-    children: "Test",
+    variant: "cream",
+    children: <Zap  />,
+    size: 'icon-xl'
   },
 };

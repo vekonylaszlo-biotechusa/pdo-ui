@@ -4,19 +4,19 @@ import type * as React from 'react';
 import { cn } from './lib/utils';
 
 const alertVariants = cva(
-  'relative grid w-full items-start gap-x-2 gap-y-0.5 rounded-md border px-3.5 py-3 text-card-foreground text-sm has-[>svg]:has-data-[slot=alert-action]:grid-cols-[calc(var(--spacing)*4)_1fr_auto] has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-data-[slot=alert-action]:grid-cols-[1fr_auto] has-[>svg]:gap-x-2 [&>svg]:h-[1lh] [&>svg]:w-4',
+  'relative grid w-full items-start gap-x-2 gap-y-0.5 rounded-md px-2 py-3 text-card-foreground text-sm has-[>svg]:has-data-[slot=alert-action]:grid-cols-[calc(var(--spacing)*4)_1fr_auto] has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-data-[slot=alert-action]:grid-cols-[1fr_auto] has-[>svg]:gap-x-2 [&>svg]:h-[1lh] [&>svg]:w-4',
   {
     defaultVariants: {
       variant: 'default',
     },
     variants: {
       variant: {
-        default: 'bg-transparent [&>svg]:text-muted-foreground',
+        default: 'bg-card-inset [&>svg]:text-foreground',
+        info: 'bg-info text-info-foreground [&>svg]:text-info',
         error:
-          'border-destructive/32 bg-destructive/4 [&>svg]:text-destructive',
-        info: 'border-info/32 bg-info/4 [&>svg]:text-info',
-        success: 'border-success/32 bg-success/4 [&>svg]:text-success',
-        warning: 'border-warning/32 bg-warning/4 [&>svg]:text-warning',
+          'bg-destructive text-destructive-foreground [&>svg]:text-destructive',
+        success: 'bg-success text-success-foreground [&>svg]:text-success',
+        warning: 'bg-warning text-warning-foreground [&>svg]:text-warning',
       },
     },
   },
@@ -32,6 +32,7 @@ function Alert({
       className={cn(alertVariants({ variant }), className)}
       data-slot="alert"
       role="alert"
+      data-variant={variant}
       {...props}
     />
   );

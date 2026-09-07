@@ -303,7 +303,5 @@ export {
   TooltipProvider,
   TooltipTrigger,
 } from "./tooltip";
-export { TouchButton } from "./touch-button";
-export { TouchCard, TouchCardContent, TouchCardDescription, TouchCardTitle } from "./touch-card";
-export { StandbySwitch } from "./standby-switch"
-export { BasePlate } from "./base-plate"
+export { GlassButton, glassButtonVariants } from "./glass-button";
+export { MetalCard } from "./metal-card"

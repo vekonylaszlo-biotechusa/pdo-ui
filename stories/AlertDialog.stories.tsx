@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -8,16 +8,17 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '../src/alert-dialog';
-import { Button } from '../src/button';
+} from "../src/alert-dialog";
+import { Button } from "../src/button";
+import { GlassButton } from "../src/glass-button";
 
 const meta = {
-  title: 'Example/AlertDialog',
+  title: "Example/AlertDialog",
   component: AlertDialog,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<typeof AlertDialog>;
 
 export default meta;
@@ -27,7 +28,7 @@ export const Default: Story = {
   args: {},
   render: (args) => (
     <AlertDialog>
-      <AlertDialogTrigger render={<Button variant="destructive-outline" />}>
+      <AlertDialogTrigger render={<GlassButton variant="red" />}>
         Delete Account
       </AlertDialogTrigger>
       <AlertDialogPopup>
@@ -39,10 +40,7 @@ export const Default: Story = {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogClose render={<Button variant="ghost" />}>
-            Cancel
-          </AlertDialogClose>
-          <AlertDialogClose render={<Button variant="destructive" />}>
+          <AlertDialogClose render={<GlassButton variant="red" />}>
             Delete Account
           </AlertDialogClose>
         </AlertDialogFooter>
