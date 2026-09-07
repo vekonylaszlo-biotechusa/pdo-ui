@@ -23,14 +23,6 @@ export default defineConfig({
   output: {
     target: 'web',
     emitCss: true,
-    copy: {
-      patterns: [
-        {
-          from: './src/styles.css',
-          to: './index.css',
-        },
-      ],
-    },
     externals: {
       react: 'react',
       'react-dom': 'react-dom',

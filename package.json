@@ -1,6 +1,6 @@
 {
   "name": "@biotechusa/pdo-ui",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "type": "module",
   "exports": {
     ".": {
@@ -11,7 +11,7 @@
       "default": "./dist/styles.css"
     },
     "./dist/index.css": {
-      "default": "./dist/index.css"
+      "default": "./dist/styles.css"
     }
   },
   "types": "./dist/pdo-ui/src/index.d.ts",
