@@ -5,8 +5,7 @@ import { defineConfig } from '@rslib/core';
 export default defineConfig({
   source: {
     entry: {
-      index: ['./src/**/*.{ts,tsx}', '!./src/global.d.ts', '!./src/styles-entry.ts'],
-      styles: ['./src/styles-entry.ts'],
+      index: ['./src/**/*.{ts,tsx}', '!./src/global.d.ts'],
     },
   },
   resolve: {

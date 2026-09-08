@@ -5,7 +5,7 @@ import type * as React from "react";
 import { cn } from "./lib/utils";
 
 const glassButtonVariants = cva(
-  "gbtn-before text-[16px] shadow-gb-shadow relative rounded-full inline-flex hover:-translate-y-px active:translate-y-[-0.5px] will-change-transform shrink-0 cursor-pointer items-center justify-center whitespace-nowrap font-semibold text-sm outline-none pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-disabled [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-all duration-200 ease-out [background:var(--gb-bg)] [color:var(--gb-fg)]",
+  "gbtn-before text-[16px] shadow-gb-shadow relative rounded-full inline-flex hover:-translate-y-px active:translate-y-[-0.5px] active:shadow-none will-change-transform shrink-0 cursor-pointer items-center justify-center whitespace-nowrap font-semibold text-sm outline-none pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-disabled [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 [transition:box-shadow_200ms,background-image_200ms,transform_70ms,color_300ms] active:scale-[0.98] [background:var(--gb-bg)] [color:var(--gb-fg)]",
   {
     defaultVariants: {
       size: "default",
