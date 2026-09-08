@@ -5,7 +5,7 @@ import { defineConfig } from '@rslib/core';
 export default defineConfig({
   source: {
     entry: {
-      index: ['./src/**/*.{ts,tsx}', '!./src/global.d.ts'],
+      index: ['./src/**', '!./src/lib/*.png'],
     },
   },
   resolve: {
