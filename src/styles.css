@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 :root {
     --accent: oklch(0.56 0.16 240.67);
