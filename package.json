@@ -1,6 +1,6 @@
 {
   "name": "@biotechusa/pdo-ui",
-  "version": "1.0.40",
+  "version": "1.0.41",
   "type": "module",
   "exports": {
     ".": {
@@ -12,6 +12,9 @@
     },
     "./dist/index.css": {
       "default": "./dist/styles.css"
+    },
+    "./dist/theme.css": {
+      "default": "./dist/theme.css"
     }
   },
   "types": "./dist/pdo-ui/src/index.d.ts",
@@ -19,7 +22,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rslib build",
+    "build": "rslib build && node scripts/build-theme-css.mjs",
     "build:storybook": "storybook build",
     "check": "biome check --write",
     "dev": "rslib build --watch",

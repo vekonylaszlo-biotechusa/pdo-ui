@@ -70,10 +70,9 @@
     --muted-foreground: oklch(from var(--accent) 0.65 0.015 h);
     --border: oklch(0.922 0 0);
     --input: oklch(0 0 0 / 0.03);
-    --input-border: oklch(0 0 0 / 0.05);
+    --input-border: oklch(0 0 0 / 0);
     --input-shadow:
-        inset 0 0 0 1px #2b3144,
-        inset 0 2px 4px rgba(0, 0, 0, 0.025);
+        inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #fff, 0 1px 0 #fff;
     --ring: oklch(0.708 0 0);
 
     /* ---- Charts ---- */
@@ -313,8 +312,9 @@
     --muted-foreground: oklch(0.708 0 0);
     --border: oklch(0.269 0 0);
     --input: oklch(0 0 0);
-    --input-border: oklch(0.29 0 0);
-    --input-shadow: none;
+    --input-border: none;
+    --input-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 -1px 1px #202020, 0 1px 0 #202020;
     --ring: oklch(0.439 0 0);
 
     /* ---- Charts ---- */
@@ -792,7 +792,7 @@
     --shadow-depth: var(--depth-shadow);
     --shadow-card-shadow: var(--shadow-card-shadow);
     --shadow-gb-shadow: var(--gb-shadow);
-    --shadow-input-shadow: var(--shadow-input-shadow);
+    --shadow-input-shadow: var(--input-shadow);
 
     /* ---- Opacity ---- */
     --opacity-disabled: var(--opacity-disabled);
