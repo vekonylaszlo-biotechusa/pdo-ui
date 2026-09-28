@@ -13,7 +13,7 @@ const badgeVariants = cva(
     },
     variants: {
       size: {
-        default: 'px-1.5 py-0.5 text-xs',
+        default: 'px-2 py-1 text-xs',
         lg: 'px-2 text-sm',
         sm: 'rounded-[calc(var(--radius-sm)-3px)] px-1 text-[.625rem]',
       },
@@ -30,6 +30,14 @@ const badgeVariants = cva(
           'bg-secondary text-secondary-foreground [button,a&]:hover:bg-secondary/90',
         success: 'bg-success text-success-foreground',
         warning: 'bg-warning text-warning-foreground',
+        silver:
+          "metal-ring-before isolate rounded-full border-transparent  leading-none text-[color:var(--metal-silver-foreground)] [--metal-ring-bg:var(--metal-silver-ring)] [background-blend-mode:screen] [background:var(--metal-silver-bg)] [box-shadow:var(--metal-shadow)] [text-shadow:var(--metal-silver-text-shadow)]",
+        gold:
+          "metal-ring-before isolate rounded-full border-transparent  leading-none text-[color:var(--metal-gold-foreground)] [--metal-ring-bg:var(--metal-gold-ring)] [background-blend-mode:screen] [background:var(--metal-gold-bg)] [box-shadow:var(--metal-shadow)] [text-shadow:var(--metal-gold-text-shadow)]",
+        graphite:
+          "metal-ring-before isolate rounded-full border-transparent  leading-none text-[color:var(--metal-graphite-foreground)] [--metal-ring-bg:var(--metal-graphite-ring)] [background-blend-mode:screen] [background:var(--metal-graphite-bg)] [box-shadow:var(--metal-shadow)] [text-shadow:var(--metal-graphite-text-shadow)]",
+        steel:
+          "metal-ring-before isolate rounded-full border-transparent  leading-none text-[color:var(--metal-steel-foreground)] [--metal-ring-bg:var(--metal-steel-ring)] [background-blend-mode:screen] [background:var(--metal-steel-bg)] [box-shadow:var(--metal-shadow)] [text-shadow:var(--metal-steel-text-shadow)]",
       },
     },
   },

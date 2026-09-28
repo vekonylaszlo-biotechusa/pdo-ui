@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* Registers --metallic-rotation as an animatable <angle> so the
+   transition on the metal badges' hover sweep actually interpolates
+   smoothly instead of snapping instantly (plain custom properties don't
+   interpolate unless registered like this). */
+@property --metallic-rotation {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
 :root {
     /* ---- Brand ---- */
     --accent: oklch(0.56 0.16 240.67);
@@ -190,6 +200,142 @@
         rgba(255, 255, 255, 0.5) 102.08%
     );
 
+    /* ---- Metal badges ---- */
+    /* Values copied verbatim from getComputedStyle() on the live Mint "Tag"
+       demo (silver/gold/graphite/steel spans) on performance.dev's
+       wealthsimple-year-one post, read directly from its shadow DOM. */
+    --metal-noise: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='2' stitchTiles='stitch'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='0.18'/></svg>")
+        repeat scroll 0 0 / 64px 64px;
+    --metal-shadow: 0 6px 13px rgba(0, 0, 0, 0.08), 0 1.5px 3px rgba(0, 0, 0, 0.06);
+
+    --metal-silver-bg: var(--metal-noise),
+        linear-gradient(
+            118.53deg,
+            #dddfe2 17.3%,
+            #e8e9eb 37.34%,
+            #c1c3c7 68.18%,
+            #a0a4aa 84.24%
+        );
+    --metal-silver-foreground: rgba(0, 0, 0, 0.5);
+    --metal-silver-text-shadow: rgba(255, 255, 255, 0.15) 0px 0.5px 0px;
+
+    --metal-gold-bg: var(--metal-noise),
+        linear-gradient(
+            117.58deg,
+            #e5e3df -2.35%,
+            #e4e3de 11.91%,
+            #edebe6 28.05%,
+            #9f9b91 87.03%,
+            #9d998f 100.15%
+        );
+    --metal-gold-foreground: rgba(0, 0, 0, 0.6);
+    --metal-gold-text-shadow: rgba(255, 255, 255, 0.15) 0px 0.5px 0px;
+
+    --metal-graphite-bg: var(--metal-noise),
+        linear-gradient(99.27deg, #7a7a7a 7.62%, #383838 53.53%, #2e2e2e 92.27%);
+    --metal-graphite-foreground: rgb(255, 255, 255);
+    --metal-graphite-text-shadow: rgba(0, 0, 0, 0.35) 0px 0.25px 0px;
+
+    --metal-steel-bg: var(--metal-noise),
+        linear-gradient(112.9deg, #455c68 26.07%, #a2b2ba 93.62%);
+    --metal-steel-foreground: rgb(255, 255, 255);
+    --metal-steel-text-shadow: rgba(0, 0, 0, 0.25) 0px 0.25px 0px;
+
+    /* Masked-ring conic gradients for the ::before sheen, copied verbatim
+       from the injected <style> rules for the live Mint "Tag" demo spans
+       (found via document/shadow-root styleSheets, not just computed
+       styles) -- includes the --metallic-rotation hover sweep and the
+       exact fallback colors, which computed-style alone had missed. */
+    --metal-silver-ring: conic-gradient(
+            from calc(180deg + var(--metallic-rotation, 0deg)) at 50% 50%,
+            rgba(177, 179, 185, 0.97) -4.21deg,
+            rgba(93, 99, 108, 0.94) 9.02deg,
+            rgba(85, 91, 105, 0.92) 21.83deg,
+            rgba(223, 223, 223, 0.9) 41.43deg,
+            #72798a 62.99deg,
+            rgba(169, 171, 179, 0.92) 83.06deg,
+            #cbcdd2 120.42deg,
+            #ffffff 149.35deg,
+            #5e646a 185.93deg,
+            rgba(142, 149, 157, 0.99) 218.85deg,
+            #ffffff 245.1deg,
+            rgba(126, 134, 146, 0.88) 269.35deg,
+            rgba(87, 93, 107, 0.96) 283.73deg,
+            #6d7580 300.99deg,
+            #f1f1f3 337.05deg,
+            rgba(151, 154, 163, 0.99) 349.31deg,
+            rgba(177, 179, 185, 0.97) 355.79deg,
+            rgba(93, 99, 108, 0.94) 369.02deg
+        ),
+        #b1b8bf;
+
+    --metal-gold-ring: conic-gradient(
+        from calc(183deg + var(--metallic-rotation, 0deg)) at 50% 50%,
+        rgba(187, 186, 182, 0.97) -4.21deg,
+        rgba(108, 104, 93, 0.94) 9.02deg,
+        rgba(107, 102, 89, 0.92) 21.83deg,
+        rgba(221, 219, 213, 0.9) 41.43deg,
+        #8c8674 62.99deg,
+        rgba(172, 169, 160, 0.92) 83.06deg,
+        #cfccc2 120.42deg,
+        #fffefc 149.35deg,
+        #6c6960 185.93deg,
+        rgba(165, 160, 147, 0.99) 218.85deg,
+        #ffffff 245.1deg,
+        rgba(151, 146, 131, 0.88) 269.35deg,
+        rgba(110, 104, 88, 0.96) 283.73deg,
+        #888476 300.99deg,
+        #f9f9f6 337.05deg,
+        rgba(158, 154, 142, 0.99) 349.31deg,
+        rgba(187, 186, 182, 0.97) 355.79deg,
+        rgba(108, 104, 93, 0.94) 369.02deg
+    );
+
+    --metal-graphite-ring: conic-gradient(
+        from calc(173.54deg + var(--metallic-rotation, 0deg)) at 50% 50%,
+        rgba(65, 65, 65, 0.79) -4.21deg,
+        rgba(20, 20, 20, 0.81) 9.02deg,
+        rgba(16, 16, 16, 0.81) 21.83deg,
+        rgba(64, 64, 64, 0.82) 41.43deg,
+        rgba(58, 58, 58, 0.64) 62.99deg,
+        rgba(54, 54, 54, 0.86) 83.06deg,
+        rgba(100, 100, 100, 0.83) 120.42deg,
+        rgba(168, 168, 168, 0.81) 149.35deg,
+        rgba(0, 0, 0, 0.76) 185.93deg,
+        rgba(48, 48, 48, 0.87) 218.85deg,
+        rgba(94, 94, 94, 0.85) 245.1deg,
+        rgba(42, 42, 42, 0.74) 269.35deg,
+        rgba(54, 54, 54, 0.83) 283.73deg,
+        rgba(0, 0, 0, 0.8) 300.99deg,
+        rgba(91, 91, 91, 0.78) 337.05deg,
+        rgba(41, 41, 41, 0.73) 349.31deg,
+        rgba(65, 65, 65, 0.79) 355.79deg,
+        rgba(20, 20, 20, 0.81) 369.02deg
+    );
+
+    --metal-steel-ring: conic-gradient(
+            from calc(180deg + var(--metallic-rotation, 0deg)) at 50% 50%,
+            rgba(177, 179, 185, 0.97) -4.21deg,
+            rgba(93, 99, 108, 0.94) 9.02deg,
+            rgba(85, 91, 105, 0.92) 21.83deg,
+            rgba(190, 195, 200, 0.85) 41.43deg,
+            #72798a 62.99deg,
+            rgba(169, 171, 179, 0.92) 83.06deg,
+            #a8aeb5 120.42deg,
+            #bfc5cb 149.35deg,
+            #5e646a 185.93deg,
+            rgba(142, 149, 157, 0.99) 218.85deg,
+            #bfc5cb 245.1deg,
+            rgba(126, 134, 146, 0.88) 269.35deg,
+            rgba(87, 93, 107, 0.96) 283.73deg,
+            #6d7580 300.99deg,
+            #b8bcc2 337.05deg,
+            rgba(151, 154, 163, 0.99) 349.31deg,
+            rgba(177, 179, 185, 0.97) 355.79deg,
+            rgba(93, 99, 108, 0.94) 369.02deg
+        ),
+        #b1b8bf;
+
     /* ---- Radii ---- */
     --radius: 0.625rem;
     --radius-lg: 9px;
@@ -311,10 +457,10 @@
     --muted: oklch(0.22 0 286.24);
     --muted-foreground: oklch(0.708 0 0);
     --border: oklch(0.269 0 0);
-    --input: oklch(0 0 0);
-    --input-border: none;
+    --input: oklch(1 0 0 / 0.04);
+    --input-border: oklch(1 0 0 / 0);
     --input-shadow:
-        inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 -1px 1px #202020, 0 1px 0 #202020;
+        inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 -1px 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.06);
     --ring: oklch(0.439 0 0);
 
     /* ---- Charts ---- */
@@ -912,6 +1058,39 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
+}
+
+/* Same masked-border-ring technique as .gbtn-before::before, at the 1.5px
+   ring width used by the metal badges (silver/gold/graphite/steel). */
+.metal-ring-before::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: inherit;
+    background: var(--metal-ring-bg);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Hand-written (not Tailwind-generated) base + hover/focus rules for the
+   metal badges, mirroring the reference's own plain-CSS authoring
+   exactly, so the rotation sweep doesn't depend on Tailwind's JIT
+   correctly compiling a "modifier + arbitrary custom property" utility
+   combination. */
+.metal-ring-before {
+    transition:
+        --metallic-rotation 0.9s cubic-bezier(0.32, 0.72, 0, 1),
+        transform 300ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.metal-ring-before:hover,
+.metal-ring-before:focus-visible {
+    --metallic-rotation: 18deg;
+    transform: translateY(-1px);
 }
 
 .gbtn-inner-stroke {

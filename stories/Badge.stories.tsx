@@ -94,3 +94,45 @@ export const WithIcon: Story = {
     variant: 'success',
   },
 };
+
+export const Silver: Story = {
+  args: {
+    children: 'Silver',
+    variant: 'silver',
+  },
+};
+
+export const Gold: Story = {
+  args: {
+    children: 'Gold',
+    variant: 'gold',
+  },
+};
+
+export const Graphite: Story = {
+  args: {
+    children: 'Graphite',
+    variant: 'graphite',
+  },
+};
+
+export const Steel: Story = {
+  args: {
+    children: 'Steel',
+    variant: 'steel',
+  },
+};
+
+export const Metals: Story = {
+  args: {
+    children: 'Silver',
+  },
+  render: () => (
+    <div className="flex items-center gap-2">
+      <Badge variant="silver">Silver</Badge>
+      <Badge variant="gold">Gold</Badge>
+      <Badge variant="graphite">Graphite</Badge>
+      <Badge variant="steel">Steel</Badge>
+    </div>
+  ),
+};
